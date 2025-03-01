@@ -1,9 +1,7 @@
 import { useState } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Sidebar } from "./Sidebar";
-import { Separator } from "@radix-ui/react-separator";
 
 export const Navbar = () => {
 
