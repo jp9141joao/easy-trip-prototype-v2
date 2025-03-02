@@ -11,7 +11,7 @@ export const HeroSection = () => {
             <div className="">
                 <img 
                     src={Image}
-                    className="rounded-4xl"
+                    className="rounded-3xl"
                 />
             </div>
             <div className="text-start">
@@ -27,7 +27,7 @@ export const HeroSection = () => {
             <div className="w-full items-left">
                 <Button
                     size={"xl"}
-                    className="text-base"
+                    className="text-base "
                 >
                     Learn more
                 </Button>
