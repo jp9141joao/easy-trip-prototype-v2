@@ -1,5 +1,5 @@
-import ImageExpense from '../assets/blake-wisz-Xn5FbEM9564-unsplash.jpg'
-import ImageItinerary from '../assets/estee-janssens-zni0zgb3bkQ-unsplash.jpg'
+import ImageExpense from '../assets/expense-image.png'
+import ImageItinerary from '../assets/Design sem nome (1).jpg'
 import ImageToDoList from '../assets/thomas-bormans-pcpsVsyFp_s-unsplash.jpg'
 import ImagePiggyBank from '../assets/pxfuel.jpg'
 
@@ -8,24 +8,24 @@ export const FeaturesSection = () => {
 
     const features = [
         {
-            title: 'Expenses',
-            description: 'Easily record and categorize your travel expenses in one place. Stay within budget and make smarter financial decisions throughout your trip.',
-            url: ImageExpense
-        },
-        {
-            title: 'Itinerary',
-            description: 'Create and customize your travel itinerary with ease. Organize activities, accommodations, and transport to maximize your experience.',
-            url: ImageItinerary
-        },
-        {
             title: 'To-Do List',
             description: 'Keep track of tasks before and during your trip. From packing checklists to sightseeing plans, never miss an important detail.',
             url: ImageToDoList
         },
         {
+            title: 'Expenses',
+            description: 'Easily record and categorize your travel expenses in one place. Stay within budget and make smarter financial decisions throughout your trip.',
+            url: ImageExpense
+        },
+        {
             title: 'My Piggy Bank',
             description: 'Set savings goals and track your progress toward your dream trip. Make budgeting for travel easy and motivating.',
             url: ImagePiggyBank
+        },
+        {
+            title: 'Itinerary',
+            description: 'Create and customize your travel itinerary with ease. Organize activities, accommodations, and transport to maximize your experience.',
+            url: ImageItinerary
         },
     ];
 
