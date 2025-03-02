@@ -1,7 +1,5 @@
 import { Button } from "./ui/button"
-import { MdCalendarMonth, MdOutlineAccessTime, MdOutlineCalendarToday } from "react-icons/md";
-import { FaCoins, FaSmile } from "react-icons/fa";
-import { LiaMoneyBillSolid } from "react-icons/lia";
+import { MdOutlineAccessTime, MdOutlineCalendarToday } from "react-icons/md";
 import { LuPartyPopper, LuReceipt } from "react-icons/lu";
 
 import Image from '../assets/photo-1539635278303-d4002c07eae3.avif'
