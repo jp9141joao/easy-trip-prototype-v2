@@ -22,11 +22,11 @@ export const Navbar = () => {
     ]
 
     return (
-        <header className="w-full grid relative top-0 my-2 font-semibold">
+        <header className="w-full grid relative top-0 my-2 font-semibold px-[0.7em]">
             <nav className="w-full flex justify-between center">
                 <div className="flex gap-1 items-center">
                     <span 
-                        className="block bg-[#00AF87] h-[1.7em] xs:h-[1.9em] lg:h-[2em] w-1"
+                        className="block bg-green-theme h-[1.7em] xs:h-[1.9em] lg:h-[2em] w-1"
                     />
                     <h1 className="text-2xl sm:text-xl lg:text-2xl"> 
                         Easy Trip
@@ -39,7 +39,7 @@ export const Navbar = () => {
                         {
                             navItems.map((item: any, index: number) => (
                                 <div
-                                    className="sm:text-sm lg:text-base hover:border-b-3 hover:border-[#00AF87] cursor-pointer duration-100" 
+                                    className="sm:text-sm lg:text-base hover:border-b-3 hover:border-green-thembg-green-theme cursor-pointer duration-100" 
                                     key={index}
                                 >
                                     <p>
