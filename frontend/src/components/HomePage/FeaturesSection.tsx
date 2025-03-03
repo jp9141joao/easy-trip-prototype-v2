@@ -1,7 +1,7 @@
-import ImageExpense from '../../assets/home/features/expense.png'
-import ImageItinerary from '../../assets/home/features/itinerary.jpg'
-import ImageToDoList from '../../assets/home/features/to-do.jpg'
-import ImagePiggyBank from '../../assets/home/features/piggy-bank.jpg'
+import ImageExpense from '../../assets/home/expense.png'
+import ImageItinerary from '../../assets/home/itinerary.jpg'
+import ImageToDoList from '../../assets/home/to-do.jpg'
+import ImagePiggyBank from '../../assets/home/piggy-bank.jpg'
 import { FaRegSquareCheck } from "react-icons/fa6";
 import { LuPiggyBank } from "react-icons/lu";
 import { MdOutlineMap } from "react-icons/md";

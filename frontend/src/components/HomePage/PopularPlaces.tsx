@@ -1,20 +1,20 @@
 import { JSX, useState } from 'react';
-import ImageNewYorkCard from '../../assets/home/popular-places/new-york-card.jpg';
-import ImageNewYorkDialog from '../../assets/home/popular-places/new-york-dialog.jpg';
-import ImageRioDeJaneiroCard from '../../assets/home/popular-places/rio-de-janeiro-card.jpg';
-import ImageRioDeJaneiroDialog from '../../assets/home/popular-places/rio-de-janeiro-dialog.jpg';
-import ImageParisCard from '../../assets/home/popular-places/paris-card.jpg';
-import ImageParisDialog from '../../assets/home/popular-places/paris-dialog.jpg';
-import ImageLondonCard from '../../assets/home/popular-places/london-card.jpg';
-import ImageLondonDialog from '../../assets/home/popular-places/london-dialog.jpg';
-import ImageSantiagoCard from '../../assets/home/popular-places/santiago-card.jpg';
-import ImageSantiagoDialog from '../../assets/home/popular-places/santiago-dialog.jpg';
-import ImageRomeCard from '../../assets/home/popular-places/rome-card.jpg';
-import ImageRomeDialog from '../../assets/home/popular-places/rome-dialog.jpg';
-import ImageBarilocheCard from '../../assets/home/popular-places/bariloche-card.jpg';
-import ImageBarilocheDialog from '../../assets/home/popular-places/bariloche-dialog.jpg';
-import ImageAthensCard from '../../assets/home/popular-places/athens-card.jpg';
-import ImageAthensDialog from '../../assets/home/popular-places/athens-dialog.jpg';
+import ImageNewYorkCard from '../../assets/home/new-york-card.jpg';
+import ImageNewYorkDialog from '../../assets/home/new-york-dialog.jpg';
+import ImageRioDeJaneiroCard from '../../assets/home/rio-de-janeiro-card.jpg';
+import ImageRioDeJaneiroDialog from '../../assets/home/rio-de-janeiro-dialog.jpg';
+import ImageParisCard from '../../assets/home/paris-card.jpg';
+import ImageParisDialog from '../../assets/home/paris-dialog.jpg';
+import ImageLondonCard from '../../assets/home/london-card.jpg';
+import ImageLondonDialog from '../../assets/home/london-dialog.jpg';
+import ImageSantiagoCard from '../../assets/home/santiago-card.jpg';
+import ImageSantiagoDialog from '../../assets/home/santiago-dialog.jpg';
+import ImageRomeCard from '../../assets/home/rome-card.jpg';
+import ImageRomeDialog from '../../assets/home/rome-dialog.jpg';
+import ImageBarilocheCard from '../../assets/home/bariloche-card.jpg';
+import ImageBarilocheDialog from '../../assets/home/bariloche-dialog.jpg';
+import ImageAthensCard from '../../assets/home/athens-card.jpg';
+import ImageAthensDialog from '../../assets/home/athens-dialog.jpg';
 import { TbHandClick } from "react-icons/tb";
 import { 
     Carousel, 

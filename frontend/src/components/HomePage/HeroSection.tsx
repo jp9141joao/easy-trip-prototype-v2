@@ -1,8 +1,7 @@
 import { Button } from "../ui/button"
 import { MdOutlineAccessTime, MdOutlineCalendarToday } from "react-icons/md";
 import { LuPartyPopper, LuReceipt } from "react-icons/lu";
-
-import Image from '../../assets/home/hero/hero.avif'
+import Image from '../../assets/home/hero.avif'
 
 export const HeroSection = () => {
 
