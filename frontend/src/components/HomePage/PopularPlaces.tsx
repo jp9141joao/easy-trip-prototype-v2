@@ -138,7 +138,7 @@ export const PopularPlaces = () => {
                 </p>
             </div>
             <div className='my-5'>
-                <Carousel className="w-full max-w-xs">
+                <Carousel className="w-full">
                     <CarouselContent className=''>
                         {
                             places.map((item: any, index: number) => (
@@ -153,7 +153,7 @@ export const PopularPlaces = () => {
                                     <div className='relative z-0'>
                                         <img 
                                             src={ item.cardImage }
-                                            className='w-[14em] h-[26em] rounded-3xl z-0'
+                                            className='w-[63vw] h-[122vw] rounded-3xl z-0'
                                         />
                                     </div>
                                     <div className='absolute top-0 right-0 p-5'>
@@ -182,7 +182,7 @@ export const PopularPlaces = () => {
                 >
                 
                     <DialogContent className="h-[100vh] rounded-none">
-                        <div className='grid place-items-start mt-[3em] p-6'>
+                        <div className='grid place-items-start mt-[14vw] p-6'>
                             <DialogHeader>
                                 <DialogTitle>                        
                                     { places[selectedPlace].city }

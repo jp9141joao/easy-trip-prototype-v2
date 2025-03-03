@@ -52,9 +52,10 @@ export const FeaturesSection = () => {
                             className={`
                                 relative 
                                 ${
-                                    index == 0 || index == 1 ? 'mb-30' : 
-                                    index == 2 ? 'mb-24' :
-                                    'mb-28'
+                                    index == 0 ? 'mb-[32vw] 2xs:mb-[30vw]' :
+                                    index == 1 ? 'mb-[39vw] 2xs:mb-[30vw]' : 
+                                    index == 2 ? 'mb-[33vw] 2xs:mb-[24vw]' :
+                                    'mb-[30vw] 2xs:mb-[24vw]'
                                 }
                             `}
                         >

@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --breakpoint-2xs: 390px;
   --breakpoint-xs: 450px;
   --color-green-theme: #00AF87;
   --default-font-family: 'Poppins', sans-serif;
