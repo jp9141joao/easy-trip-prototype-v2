@@ -181,7 +181,7 @@ export const PopularPlaces = () => {
                     
                 >
                 
-                    <DialogContent className="h-[100vh] rounded-none">
+                    <DialogContent className="h-[101vh] w-[101vw] rounded-none">
                         <div className='grid place-items-start mt-[14vw] p-6'>
                             <DialogHeader>
                                 <DialogTitle>                        
@@ -190,7 +190,6 @@ export const PopularPlaces = () => {
                                 <DialogDescription> 
                                     { renderParagraphs(places[selectedPlace].about) }
                                 </DialogDescription>
-                                
                                 <div className='w-full'>
                                     <Button
                                         size={'lg'}
@@ -206,7 +205,7 @@ export const PopularPlaces = () => {
                         <div>
                             <img 
                                 src={places[selectedPlace].dialogImage }
-                                className='w- rounded-3xl'
+                                className='w-[100vw] h-[140vw] rounded-3xl'
                             />
                         </div>
                     </DialogContent>
