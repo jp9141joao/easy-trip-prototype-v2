@@ -156,7 +156,7 @@ export const PopularPlaces = () => {
                                             className='w-[63vw] h-[122vw] rounded-3xl z-0'
                                         />
                                     </div>
-                                    <div className='absolute top-0 right-0 p-5'>
+                                    <div className='absolute top-0 pl-[51vw]  py-5 z-10'>
                                         <TbHandClick className='icon-responsive text-white'/>
                                     </div>
                                     <div className='absolute bottom-0 z-50 p-4'>
@@ -180,9 +180,8 @@ export const PopularPlaces = () => {
                     }}
                     
                 >
-                
                     <DialogContent className="h-[101vh] w-[101vw] rounded-none">
-                        <div className='grid place-items-start mt-[14vw] p-6'>
+                        <div className='grid place-items-start mt-[5vh] p-6'>
                             <DialogHeader>
                                 <DialogTitle>                        
                                     { places[selectedPlace].city }
