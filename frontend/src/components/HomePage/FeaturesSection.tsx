@@ -54,7 +54,7 @@ export const FeaturesSection = () => {
                                 ${
                                     index == 0 || index == 1 ? 'mb-30' : 
                                     index == 2 ? 'mb-24' :
-                                    'mb-22'
+                                    'mb-28'
                                 }
                             `}
                         >
