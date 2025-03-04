@@ -180,7 +180,7 @@ export const PopularPlaces = () => {
                     }}
                     
                 >
-                    <DialogContent className="h-[101vh] w-[101vw] rounded-none">
+                    <DialogContent className="h-[calc(var(--vw,1vw)*101)] h-[calc(var(--vh,1vh)*101)] rounded-none">
                         <div className='grid place-items-start mt-[calc(var(--vh,1vh)*5)] p-6'>
                             <DialogHeader>
                                 <DialogTitle>                        
