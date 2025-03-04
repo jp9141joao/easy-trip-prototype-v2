@@ -61,11 +61,13 @@ export const FeaturesSection = () => {
                         >
                             <div className='relative'>
                                 <img 
-                                    src={item.url}
+                                    src={ item.url }
+                                    alt={ item.title }
+                                    loading='eager'
                                     className='rounded-2xl'                                
                                 />
                             </div>
-                            <div className='absolute bg-gray-100 rounded-2xl shadow-md -mt-14 ml-8 p-3 z-50'>
+                            <div className='absolute bg-gray-200 rounded-2xl shadow-md -mt-14 ml-8 p-3 z-50'>
                                 <div className='flex items-center gap-2'>
                                     <h1 className="text-xl font-semibold">
                                         { item.title}

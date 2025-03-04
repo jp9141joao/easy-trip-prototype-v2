@@ -9,7 +9,9 @@ export const HeroSection = () => {
         <div className="grid place-items-center items-center gap-4 py-5 px-[1.7rem]">
             <div className="">
                 <img 
-                    src={Image}
+                    src={ Image }
+                    alt='hero-image'
+                    loading='eager'
                     className="rounded-3xl"
                 />
             </div>
@@ -27,6 +29,12 @@ export const HeroSection = () => {
                 <Button
                     size={"xl"}
                     className="text-base font-semibold"
+                    onClick={() => {
+                        window.scrollTo({
+                            top: document.documentElement.scrollHeight,
+                            behavior: 'smooth'
+                        });
+                    }}
                 >
                     Learn more
                 </Button>

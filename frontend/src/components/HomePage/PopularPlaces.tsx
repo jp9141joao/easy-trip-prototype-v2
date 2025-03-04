@@ -153,6 +153,8 @@ export const PopularPlaces = () => {
                                     <div className='relative z-0'>
                                         <img 
                                             src={ item.cardImage }
+                                            alt={ item.city }
+                                            loading='eager'
                                             className='w-[64vw] h-[122vw] rounded-3xl z-0'
                                         />
                                     </div>
@@ -193,7 +195,7 @@ export const PopularPlaces = () => {
                                     <Button
                                         size={'lg'}
                                         type="submit"
-                                        className='w-full font-semibold'
+                                        className='w-full font-semibold focus:outline-none'
                                     >
                                             Go to this place
                                     </Button>
@@ -203,7 +205,9 @@ export const PopularPlaces = () => {
                         </div>
                         <div>
                             <img 
-                                src={places[selectedPlace].dialogImage }
+                                src={ places[selectedPlace].dialogImage }
+                                alt={ places[selectedPlace].city }
+                                loading='eager'
                                 className='w-[calc(var(--vw,1vw)*100)]  h-[calc(var(--vw,1vw)*140)] rounded-3xl'
                             />
                         </div>

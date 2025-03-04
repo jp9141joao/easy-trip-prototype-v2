@@ -32,7 +32,7 @@ export const Footer = () => {
     
     return (
         <div className="rounded-t-3xl bg-gray-100">
-            <div className="grid place-items-start gap-5 mx-[1.7em] pt-5">
+            <div className="grid place-items-start gap-5 mx-[1.7em] pt-8">
                 <div>
                     <h1 className="text-3xl text-start font-extrabold  break-words">
                         EASY TRIP
@@ -44,14 +44,18 @@ export const Footer = () => {
                     </h1>
                 </div>
                 <div>
-                    <Accordion type="single" collapsible className="w-full">
+                    <Accordion 
+                        type="single" 
+                        className="w-full grid gap-3"
+                        collapsible
+                    >
                         {
                             questions.map((item: any, index: number) => (
                                 <AccordionItem
                                     key={index}
                                     value={`item-${index + 1}`}
                                 >
-                                    <AccordionTrigger>
+                                    <AccordionTrigger className="text-lg">
                                         { item.question }
                                     </AccordionTrigger>
                                     <AccordionContent>

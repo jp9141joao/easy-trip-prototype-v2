@@ -86,7 +86,7 @@ export const Sidebar = () => {
                     <div className="w-full">
                         <Button
                             type="button"
-                            className="w-full rounded-3xl font-semibold"
+                            className="w-full rounded-3xl font-semibold focus:outline-none"
                         >
                             Sign in
                         </Button>
