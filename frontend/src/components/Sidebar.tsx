@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import {
   Sheet,
-  SheetContent,
+  SheetContentBgTransparent,
   SheetTrigger,
 } from "./ui/sheet"
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
@@ -64,7 +64,7 @@ export const Sidebar = () => {
                     <HiMenuAlt3 className="icon-responsive"/>
                 }
             </SheetTrigger>
-            <SheetContent side="left">
+            <SheetContentBgTransparent side="left">
                 <div className="grid gap-5 place-items-start mx-[6vw]">
                     <div className="mt-[12vw]">
                         <h1 className="text-3xl text-start font-bold">
@@ -98,7 +98,7 @@ export const Sidebar = () => {
                         Created by Joao Pedro de Paula.
                     </p>
                 </div>
-            </SheetContent>
+            </SheetContentBgTransparent>
         </Sheet>
     )
 }

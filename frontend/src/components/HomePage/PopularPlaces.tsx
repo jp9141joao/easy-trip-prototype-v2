@@ -21,18 +21,12 @@ import {
     CarouselContent, 
     CarouselItem 
 } from '../ui/carousel';
-import { 
-    Dialog, 
-    DialogContent, 
-    DialogDescription, 
-    DialogHeader, 
-    DialogTitle 
-} from '../ui/dialog';
 import { Button } from '../ui/button';
+import { Sheet, SheetContent } from '../ui/sheet';
 
 export const PopularPlaces = () => {
     const [ selectedPlace, setSelectedPlace ] = useState<number>(0);
-    const [ showDialog, setShowDialog ] = useState<boolean>(false);
+    const [ showSheet, setShowSheet ] = useState<boolean>(false);
 
     const places = [
         {
@@ -147,7 +141,7 @@ export const PopularPlaces = () => {
                                     className='basis-[68vw]'
                                     onClick={() => {
                                         setSelectedPlace(index);
-                                        setShowDialog(true);
+                                        setShowSheet(true);
                                     }}
                                 >
                                     <div className='relative z-0'>
@@ -171,26 +165,33 @@ export const PopularPlaces = () => {
                         }
                     </CarouselContent>
                 </Carousel>
-                <Dialog
-                    open={showDialog}
+                <Sheet
+                    open={showSheet}
                     onOpenChange={(open) => {
 
                         if (!open) {
                             setSelectedPlace(0);
-                            setShowDialog(false);
+                            setShowSheet(false);
                         }
                     }}
                     
                 >
-                    <DialogContent className="h-[calc(var(--vw,1vw)*101)] h-[calc(var(--vh,1vh)*101)] rounded-none">
-                        <div className='grid place-items-start mt-[calc(var(--vh,1vh)*5)] p-6'>
-                            <DialogHeader>
-                                <DialogTitle>                        
-                                    { places[selectedPlace].city }
-                                </DialogTitle>
-                                <DialogDescription> 
-                                    { renderParagraphs(places[selectedPlace].about) }
-                                </DialogDescription>
+                    <SheetContent 
+                        side='bottom'
+                        className='rounded-3xl'
+                    >
+                        {/*className="h-[calc(var(--vw,1vw)*80)] h-[calc(var(--vh,1vh)*90)] rounded-3xl" */}
+                        <div className='grid place-items-start gap-4 px-6 pt-6'>
+                                <div>
+                                    <h1 className='text-3xl font-semibold'>
+                                        { places[selectedPlace].city }
+                                    </h1>
+                                </div>
+                                <div>
+                                    <p className='text-base'>
+                                        { renderParagraphs(places[selectedPlace].about) }
+                                    </p>
+                                </div>
                                 <div className='w-full'>
                                     <Button
                                         size={'lg'}
@@ -200,7 +201,6 @@ export const PopularPlaces = () => {
                                             Go to this place
                                     </Button>
                                 </div>
-                            </DialogHeader>
                             
                         </div>
                         <div>
@@ -208,11 +208,11 @@ export const PopularPlaces = () => {
                                 src={ places[selectedPlace].dialogImage }
                                 alt={ places[selectedPlace].city }
                                 loading='eager'
-                                className='w-[calc(var(--vw,1vw)*100)]  h-[calc(var(--vw,1vw)*140)] rounded-3xl'
+                                className=' rounded-3xl'
                             />
                         </div>
-                    </DialogContent>
-                </Dialog>
+                    </SheetContent>
+                </Sheet>
             </div>
             <div className="flex gap-2 py-7">
                 <h1 className="text-2xl text-center font-semibold">
