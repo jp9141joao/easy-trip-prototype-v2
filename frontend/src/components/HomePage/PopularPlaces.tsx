@@ -183,12 +183,12 @@ export const PopularPlaces = () => {
                         {/*className="h-[calc(var(--vw,1vw)*80)] h-[calc(var(--vh,1vh)*90)] rounded-3xl" */}
                         <div className='grid place-items-start gap-1 px-6 pt-6'>
                                 <div>
-                                    <h1 className='text-3xl font-semibold'>
+                                    <h1 className='text-xl font-semibold'>
                                         { places[selectedPlace].city }
                                     </h1>
                                 </div>
                                 <div>
-                                    <p className='text-base'>
+                                    <p className='text-sm'>
                                         { renderParagraphs(places[selectedPlace].about) }
                                     </p>
                                 </div>
@@ -197,7 +197,7 @@ export const PopularPlaces = () => {
                             <Button
                                 size={'lg'}
                                 type="submit"
-                                className='w-full font-semibold focus:outline-none'
+                                className='w-1/2 font-semibold focus:outline-none'
                             >
                                     Go to this place
                             </Button>
