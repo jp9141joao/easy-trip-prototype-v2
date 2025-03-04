@@ -62,9 +62,9 @@ function DialogContent({
       >
         {children}
         <DialogPrimitive.Close 
+          style={{ top: 'calc(1rem + env(safe-area-inset-top))' }}
           className={cn(
             "absolute right-4",
-            "top-[calc(1rem+env(safe-area-inset-top))]",
             "ring-offset-background data-[state=open]:bg-accent data-[state=open]:text-muted-foreground rounded-xs opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
           )}
         >
