@@ -39,7 +39,7 @@ export const HeroSection = () => {
                     Learn more
                 </Button>
             </div>
-            <div className="w-full grid place-items-center items-center grid-cols-2 gap-3">
+            <div className="w-full grid place-items-center items-center grid-cols-2 gap-3 pt-3">
                 <div className="card-layout">
                     <MdOutlineTravelExplore className="size-12 my-2"/>
                     <p className="text-center p-1">                    
