@@ -1,5 +1,5 @@
 import { Button } from "../ui/button"
-import { MdOutlineAccessTime, MdOutlineCalendarToday } from "react-icons/md";
+import { MdOutlineAccessTime, MdOutlineTravelExplore } from "react-icons/md";
 import { LuPartyPopper, LuReceipt } from "react-icons/lu";
 import Image from '../../assets/home/hero.avif'
 
@@ -26,16 +26,16 @@ export const HeroSection = () => {
             <div className="w-full items-left">
                 <Button
                     size={"xl"}
-                    className="text-base "
+                    className="text-base font-semibold"
                 >
                     Learn more
                 </Button>
             </div>
             <div className="w-full grid place-items-center items-center grid-cols-2 gap-3">
                 <div className="card-layout">
-                    <MdOutlineCalendarToday className="size-12 my-2"/>
+                    <MdOutlineTravelExplore className="size-12 my-2"/>
                     <p className="text-center p-1">                    
-                        Centralize travel details to craft itineraries tailored to your interests.
+                        Centralize travel details to build trips tailored to your interests.
                     </p>
                 </div>
                 <div className="card-layout">
@@ -53,7 +53,7 @@ export const HeroSection = () => {
                 <div className="card-layout">
                     <LuPartyPopper className="size-12 my-2"/>
                     <p className="text-center p-1">
-                        Travel stress-free with a planned itinerary that reduces surprises.                    
+                        Travel stress-free with a well-organized plan that reduces surprises.                    
                     </p>
                 </div>
             </div>

@@ -22,7 +22,7 @@ export const Navbar = () => {
     ]
 
     return (
-        <header className="w-full grid relative top-0 my-2 font-semibold px-[0.7em]">
+        <header className="w-full grid my-2 font-semibold px-[0.7em]">
             <nav className="w-full flex justify-between center">
                 <div className="flex gap-1 items-center">
                     <span 
@@ -39,7 +39,7 @@ export const Navbar = () => {
                         {
                             navItems.map((item: any, index: number) => (
                                 <div
-                                    className="sm:text-sm lg:text-base hover:border-b-3 hover:border-green-thembg-green-theme cursor-pointer duration-100" 
+                                    className="sm:text-sm lg:text-base hover:border-b-3 hover:border-green-theme cursor-pointer duration-100" 
                                     key={index}
                                 >
                                     <p>
@@ -53,7 +53,7 @@ export const Navbar = () => {
                         }        
                         <div>
                             <Button
-                                className="sm:text-sm lg:text-base hover:scale-105"
+                                className="font-semibold sm:text-sm lg:text-base hover:scale-105"
                                 size={"lg"}
                             >
                                 Sign In
