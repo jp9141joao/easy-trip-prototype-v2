@@ -44,22 +44,21 @@ function DialogOverlay({
   )
 }
 
-function DialogContent({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Content>) {
+function DialogContent({ className, children, ...props }) {
   return (
     <DialogPortal>
       <DialogOverlay />
       <DialogPrimitive.Content
+        data-slot="dialog-content"
         className={cn(
-          "bg-background fixed left-[50%] z-50 grid w-full max-h-[calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom))] gap-4 rounded-lg border shadow-lg duration-200",
+          "bg-background fixed left-1/2 z-50 grid w-full max-h-[calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom))] gap-4 overflow-auto rounded-lg border shadow-lg duration-200",
           className
         )}
         style={{
-          top: `calc(50% + env(safe-area-inset-top, 0px) / 2)`,
+          top: 'calc(50% + env(safe-area-inset-top) / 2)',
           transform: "translate(-50%, -50%)",
+          paddingTop: "env(safe-area-inset-top)",
+          paddingBottom: "env(safe-area-inset-bottom)"
         }}
         {...props}
       >
@@ -78,6 +77,7 @@ function DialogContent({
     </DialogPortal>
   )
 }
+
 
 
 function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
