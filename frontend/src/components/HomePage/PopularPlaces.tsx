@@ -36,7 +36,7 @@ export const PopularPlaces = () => {
                 'Visitors can enjoy Broadway shows, world-class museums, and an incredible culinary scene with everything from street food to Michelin-starred restaurants. ' +
                 'A fun fact: In New York, it is illegal to honk your horn unnecessarily, though this rule is widely ignored!',
             cardImage: ImageNewYorkCard,
-            dialogImage: ImageNewYorkDialog,
+            sheetImage: ImageNewYorkDialog,
         },
         {
             city: 'Rio de Janeiro',
@@ -46,7 +46,7 @@ export const PopularPlaces = () => {
                 'Food lovers can savor Brazilian barbecue and feijoada. ' +
                 'A fun fact: It is illegal to drive a car wearing flip-flops in Rio!',
             cardImage: ImageRioDeJaneiroCard,
-            dialogImage: ImageRioDeJaneiroDialog,
+            sheetImage: ImageRioDeJaneiroDialog,
         },
         {
             city: 'Paris',
@@ -56,7 +56,7 @@ export const PopularPlaces = () => {
                 'Enjoy a stroll along the Seine River, sip coffee at a sidewalk café, and indulge in French delicacies like croissants and escargots. ' +
                 'A fun fact: In France, it was once illegal to name a pig "Napoleon"!',
             cardImage: ImageParisCard,
-            dialogImage: ImageParisDialog,
+            sheetImage: ImageParisDialog,
         },
         {
             city: 'London',
@@ -65,7 +65,7 @@ export const PopularPlaces = () => {
                 'Enjoy world-class theater in the West End, explore vibrant markets, and savor a traditional English breakfast. ' +
                 'A fun fact: It is popularly said that it is illegal to die in the Houses of Parliament!',
             cardImage: ImageLondonCard,
-            dialogImage: ImageLondonDialog,
+            sheetImage: ImageLondonDialog,
         },
         {
             city: 'Santiago',
@@ -75,7 +75,7 @@ export const PopularPlaces = () => {
                 'Enjoy Chilean specialties like empanadas and pastel de choclo. ' +
                 'A fun fact: In Santiago, it is illegal to keep the light on in a parked car!',
             cardImage: ImageSantiagoCard,
-            dialogImage: ImageSantiagoDialog,
+            sheetImage: ImageSantiagoDialog,
         },
         {
             city: 'Rome',
@@ -84,7 +84,7 @@ export const PopularPlaces = () => {
                 'The Italian capital offers a delicious culinary experience with pasta, pizza, and gelato. ' +
                 'A fun fact: In Rome, it is illegal to eat or drink near historic monuments to preserve their beauty!',
             cardImage: ImageRomeCard,
-            dialogImage: ImageRomeDialog,
+            sheetImage: ImageRomeDialog,
         },
         {
             city: 'Bariloche',
@@ -93,7 +93,7 @@ export const PopularPlaces = () => {
                 'It is a top destination for outdoor activities like hiking and skiing, with breathtaking natural landscapes. ' +
                 'A fun fact: In Argentina, it is illegal to name your child "Messi" to prevent overuse of the football star’s name!',
             cardImage: ImageBarilocheCard,
-            dialogImage: ImageBarilocheDialog,
+            sheetImage: ImageBarilocheDialog,
         },
         {
             city: 'Athens',
@@ -102,7 +102,7 @@ export const PopularPlaces = () => {
                 'Experience rich Greek culture through its lively streets, traditional tavernas, and historic ruins. ' +
                 'A fun fact: In Greece, it is illegal to wear high heels at ancient monuments to protect the ruins!',
             cardImage: ImageAthensCard,
-            dialogImage: ImageAthensDialog,
+            sheetImage: ImageAthensDialog,
         },
     ];
 
@@ -181,7 +181,7 @@ export const PopularPlaces = () => {
                         className='rounded-3xl'
                     >
                         {/*className="h-[calc(var(--vw,1vw)*80)] h-[calc(var(--vh,1vh)*90)] rounded-3xl" */}
-                        <div className='grid place-items-start gap-4 px-6 pt-6'>
+                        <div className='grid place-items-start gap-4 px-6 pt-6 pb-2'>
                                 <div>
                                     <h1 className='text-3xl font-semibold'>
                                         { places[selectedPlace].city }
@@ -205,10 +205,10 @@ export const PopularPlaces = () => {
                         </div>
                         <div>
                             <img 
-                                src={ places[selectedPlace].dialogImage }
+                                src={ places[selectedPlace].sheetImage }
                                 alt={ places[selectedPlace].city }
                                 loading='eager'
-                                className=' rounded-3xl'
+                                className='w-[100vw] h-[50vh] rounded-t-3xl'
                             />
                         </div>
                     </SheetContent>
@@ -268,7 +268,7 @@ export const PopularPlaces = () => {
                 'Visitors can enjoy Broadway shows, world-class museums, and an incredible culinary scene with everything from street food to Michelin-starred restaurants. ' +
                 'A fun fact: In New York, it is illegal to honk your horn unnecessarily, though this rule is widely ignored!',
             cardImage: ImageNewYorkCard,
-            dialogImage: ImageNewYorkDialog,
+            sheetImage: ImageNewYorkDialog,
         },
         {
             city: 'Rio de Janeiro',
@@ -278,7 +278,7 @@ export const PopularPlaces = () => {
                 'Food lovers can savor Brazilian barbecue and feijoada. ' +
                 'A fun fact: It is illegal to drive a car wearing flip-flops in Rio!',
             cardImage: ImageRioDeJaneiroCard,
-            dialogImage: ImageRioDeJaneiroDialog,
+            sheetImage: ImageRioDeJaneiroDialog,
         },
         {
             city: 'Paris',
@@ -288,7 +288,7 @@ export const PopularPlaces = () => {
                 'Enjoy a stroll along the Seine River, sip coffee at a sidewalk café, and indulge in French delicacies like croissants and escargots. ' +
                 'A fun fact: In France, it was once illegal to name a pig "Napoleon"!',
             cardImage: ImageParisCard,
-            dialogImage: ImageParisDialog,
+            sheetImage: ImageParisDialog,
         },
         {
             city: 'London',
@@ -297,7 +297,7 @@ export const PopularPlaces = () => {
                 'Enjoy world-class theater in the West End, explore vibrant markets, and savor a traditional English breakfast. ' +
                 'A fun fact: It is popularly said that it is illegal to die in the Houses of Parliament!',
             cardImage: ImageLondonCard,
-            dialogImage: ImageLondonDialog,
+            sheetImage: ImageLondonDialog,
         },
         {
             city: 'Santiago',
@@ -307,7 +307,7 @@ export const PopularPlaces = () => {
                 'Enjoy Chilean specialties like empanadas and pastel de choclo. ' +
                 'A fun fact: In Santiago, it is illegal to keep the light on in a parked car!',
             cardImage: ImageSantiagoCard,
-            dialogImage: ImageSantiagoDialog,
+            sheetImage: ImageSantiagoDialog,
         },
         {
             city: 'Rome',
@@ -316,7 +316,7 @@ export const PopularPlaces = () => {
                 'The Italian capital offers a delicious culinary experience with pasta, pizza, and gelato. ' +
                 'A fun fact: In Rome, it is illegal to eat or drink near historic monuments to preserve their beauty!',
             cardImage: ImageRomeCard,
-            dialogImage: ImageRomeDialog,
+            sheetImage: ImageRomeDialog,
         },
         {
             city: 'Bariloche',
@@ -325,7 +325,7 @@ export const PopularPlaces = () => {
                 'It is a top destination for outdoor activities like hiking and skiing, with breathtaking natural landscapes. ' +
                 'A fun fact: In Argentina, it is illegal to name your child "Messi" to prevent overuse of the football star’s name!',
             cardImage: ImageBarilocheCard,
-            dialogImage: ImageBarilocheDialog,
+            sheetImage: ImageBarilocheDialog,
         },
         {
             city: 'Athens',
@@ -334,7 +334,7 @@ export const PopularPlaces = () => {
                 'Experience rich Greek culture through its lively streets, traditional tavernas, and historic ruins. ' +
                 'A fun fact: In Greece, it is illegal to wear high heels at ancient monuments to protect the ruins!',
             cardImage: ImageAthensCard,
-            dialogImage: ImageAthensDialog,
+            sheetImage: ImageAthensDialog,
         },
     ];
 

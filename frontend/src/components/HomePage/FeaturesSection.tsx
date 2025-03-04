@@ -72,7 +72,7 @@ export const FeaturesSection = () => {
                                     <h1 className="text-xl font-semibold">
                                         { item.title}
                                     </h1>
-                                    <span className=''>
+                                    <span>
                                         { item.icon }
                                     </span>
                                 </div>
