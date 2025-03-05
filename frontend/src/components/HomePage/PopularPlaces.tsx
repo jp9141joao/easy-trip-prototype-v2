@@ -223,6 +223,7 @@ export const PopularPlaces = () => {
 }
 
 /*
+https://www.freepik.com/free-photo/close-up-people-planning-trip_16688728.htm
 import { JSX, useState } from 'react';
 import ImageNewYorkCard from '../../assets/home/new-york-card.jpg';
 import ImageNewYorkDialog from '../../assets/home/new-york-dialog.jpg';
