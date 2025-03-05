@@ -8,7 +8,10 @@
   --breakpoint-2xs: 390px;
   --breakpoint-xs: 450px;
   --color-green-theme: #00AF87;
+  --color-gray-dark: #313136;
   --default-font-family: 'Poppins', sans-serif;
+
+  --background-dark: #313136;
 }
 
 .icon-responsive {
@@ -16,9 +19,8 @@
 }
 
 .card-layout {
-  @apply grid place-items-center h-full bg-gray-100 text-gray-800 rounded-3xl p-3 shadow-sm;
+  @apply grid place-items-center h-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-3xl p-3 shadow-sm;
 }
-
 
 :root {
   --background: oklch(1 0 0);

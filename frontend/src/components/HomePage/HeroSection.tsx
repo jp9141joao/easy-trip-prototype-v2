@@ -21,7 +21,7 @@ export const HeroSection = () => {
                                             Awaits!
                                         </strong>       
                 </h1>
-                <p className="text-lg text-gray-800 break-words">
+                <p className="text-lg text-gray-800 dark:text-gray-200 break-words">
                     Explore breathtaking destinations and create unforgettable memories.
                 </p>
             </div>

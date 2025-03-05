@@ -19,7 +19,7 @@ export const Navbar = () => {
             name: 'About us',
             href: '/about-us',
         }
-    ]
+    ];
 
     return (
         <header className="w-full grid my-2 font-semibold px-[0.7em]">
@@ -62,7 +62,10 @@ export const Navbar = () => {
                     </div>
                     <div 
                         className="select-none cursor-pointer"
-                        onClick={() => setChangeTheme(changeTheme == "light" ? "dark" : "light")}
+                        onClick={() => {
+                            setChangeTheme(changeTheme == "light" ? "dark" : "light");
+                            document.documentElement.classList.toggle('dark');
+                        }}
                     >
                         {
                             changeTheme == "light" ?

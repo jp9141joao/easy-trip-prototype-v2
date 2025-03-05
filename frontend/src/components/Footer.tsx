@@ -31,7 +31,7 @@ export const Footer = () => {
     ];
     
     return (
-        <div className="rounded-t-3xl bg-gray-100">
+        <div className="rounded-t-3xl bg-gray-100 dark:bg-gray-900">
             <div className="grid place-items-start gap-5 mx-[1.7em] pt-8">
                 <div>
                     <h1 className="text-3xl text-start font-extrabold  break-words">

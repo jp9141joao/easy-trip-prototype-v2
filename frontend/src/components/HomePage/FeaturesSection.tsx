@@ -67,9 +67,9 @@ export const FeaturesSection = () => {
                                     className='rounded-2xl'                                
                                 />
                             </div>
-                            <div className='absolute bg-gray-200 rounded-2xl shadow-md -mt-14 ml-8 p-3 z-50'>
+                            <div className='absolute bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 ml-8 p-3 z-50'>
                                 <div className='flex items-center gap-2'>
-                                    <h1 className="text-xl font-semibold">
+                                    <h1 className="text-xl font-semibo">
                                         { item.title}
                                     </h1>
                                     <span>
@@ -77,7 +77,7 @@ export const FeaturesSection = () => {
                                     </span>
                                 </div>
                                 <div>
-                                    <p className='text-gray-800'>
+                                    <p className='text-gray-800 dark:text-gray-200'>
                                         { item.description }
                                     </p>
                                 </div>
