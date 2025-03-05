@@ -2,8 +2,14 @@ import { Button } from "../ui/button"
 import { MdOutlineAccessTime, MdOutlineTravelExplore } from "react-icons/md";
 import { LuPartyPopper, LuReceipt } from "react-icons/lu";
 import Image from '../../assets/home/hero.avif'
+import { useEffect } from "react";
+import { preload } from "react-dom";
 
 export const HeroSection = () => {
+
+    useEffect(() => {
+        preload(Image, { as: 'image' });
+    }, []);
 
     return (
         <div className="grid place-items-center items-center gap-4 py-5 px-[1.7rem]">

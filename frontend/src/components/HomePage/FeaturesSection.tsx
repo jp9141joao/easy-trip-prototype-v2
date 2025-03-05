@@ -6,8 +6,24 @@ import { FaRegSquareCheck } from "react-icons/fa6";
 import { LuPiggyBank } from "react-icons/lu";
 import { MdOutlineMap } from "react-icons/md";
 import { BiMoneyWithdraw } from "react-icons/bi";
+import { useEffect } from 'react';
+import { preload } from 'react-dom';
 
 export const FeaturesSection = () => {
+
+    useEffect(() => {
+        const images = [
+            ImageExpense,
+            ImageItinerary,
+            ImageToDoList,
+            ImagePiggyBank
+        ];
+
+        images.forEach(img => {
+            preload(img, { as: 'image' });
+        });
+
+    }, [])
 
     const features = [
         {

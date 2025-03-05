@@ -1,4 +1,4 @@
-import { JSX, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 import ImageNewYorkCard from '../../assets/home/new-york-card.jpg';
 import ImageNewYorkDialog from '../../assets/home/new-york-dialog.jpg';
 import ImageRioDeJaneiroCard from '../../assets/home/rio-de-janeiro-card.jpg';
@@ -23,10 +23,37 @@ import {
 } from '../ui/carousel';
 import { Button } from '../ui/button';
 import { Sheet, SheetContent } from '../ui/sheet';
+import { preload } from 'react-dom';
 
 export const PopularPlaces = () => {
     const [ selectedPlace, setSelectedPlace ] = useState<number>(0);
     const [ showSheet, setShowSheet ] = useState<boolean>(false);
+
+    useEffect(() => {
+        const images = [
+            ImageNewYorkCard,
+            ImageNewYorkDialog,
+            ImageRioDeJaneiroCard,
+            ImageRioDeJaneiroDialog,
+            ImageParisCard,
+            ImageParisDialog,
+            ImageLondonCard,
+            ImageLondonDialog,
+            ImageSantiagoCard,
+            ImageSantiagoDialog,
+            ImageRomeCard,
+            ImageRomeDialog,
+            ImageBarilocheCard,
+            ImageBarilocheDialog,
+            ImageAthensCard,
+            ImageAthensDialog,
+        ];
+
+        images.forEach(img => {
+            preload(img, { as: 'image' });
+        });
+
+    }, [])
 
     const places = [
         {
@@ -176,10 +203,7 @@ export const PopularPlaces = () => {
                     }}
                     
                 >
-                    <SheetContent 
-                        side='bottom'
-                        className='rounded-3xl'
-                    >
+                    <SheetContent side='bottom'>
                         <div className='grid place-items-start gap-1 px-6 pt-6'>
                                 <div>
                                     <h1 className='text-xl font-semibold'>
@@ -196,7 +220,7 @@ export const PopularPlaces = () => {
                             <Button
                                 size={'lg'}
                                 type="submit"
-                                className='w-1/2 font-semibold focus:outline-none'
+                                className='w-full font-semibold focus:outline-none'
                             >
                                     Go to this place
                             </Button>
