@@ -32,14 +32,14 @@ export const Navbar = () => {
                         Easy Trip
                     </h1>
                 </div>
-                <div className="flex items-center gap-1 lg:gap-5">
+                <div className="flex items-center gap-1 md:gap-5">
                     <div 
-                        className="hidden sm:flex sm:gap-4 lg:gap-7 items-center"
+                        className="hidden sm:flex sm:gap-4 md:gap-5 lg:gap-7 items-center"
                     >
                         {
                             navItems.map((item: any, index: number) => (
                                 <div
-                                    className="sm:text-sm lg:text-base hover:border-b-3 hover:border-green-theme cursor-pointer duration-100" 
+                                    className="sm:text-sm md:text-base lg:text-base hover:border-b-3 hover:border-green-theme cursor-pointer duration-100" 
                                     key={index}
                                 >
                                     <p>
@@ -53,7 +53,7 @@ export const Navbar = () => {
                         }        
                         <div>
                             <Button
-                                className="font-semibold sm:text-base sm lg:text-base hover:scale-105"
+                                className="font-semibold sm:text-sm md:text-base lg:text-base hover:scale-105"
                                 size={"lg"}
                             >
                                 Sign In
