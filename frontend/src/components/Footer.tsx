@@ -34,10 +34,10 @@ export const Footer = () => {
         <div className="rounded-t-3xl bg-gray-100 dark:bg-gray-900">
             <div className="grid place-items-start gap-5 margin-x-page pt-8">
                 <div>
-                    <h1 className="text-3xl sm:text-4xl text-start font-extrabold  break-words">
+                    <h1 className="text-3xl sm:text-5xl text-start font-extrabold  break-words">
                         EASY TRIP
                     </h1>
-                    <h1 className="text-3xl sm:text-4xl text-start text-green-theme  font-semibold break-words">
+                    <h1 className="text-3xl sm:text-5xl text-start text-green-theme  font-semibold break-words">
                         <strong>
                             FAQ !
                         </strong>
@@ -55,10 +55,10 @@ export const Footer = () => {
                                     key={index}
                                     value={`item-${index + 1}`}
                                 >
-                                    <AccordionTrigger className="text-lg sm:text-xl">
+                                    <AccordionTrigger className="text-lg sm:text-2xl">
                                         { item.question }
                                     </AccordionTrigger>
-                                    <AccordionContent className="sm:text-lg">
+                                    <AccordionContent className="sm:text-xl">
                                         { item.answer }
                                     </AccordionContent>
                                 </AccordionItem>
@@ -67,7 +67,7 @@ export const Footer = () => {
                     </Accordion>
                 </div>
                 <div className="w-full mt-2">
-                    <p className="text-lg sm:text-xl text-center">
+                    <p className="text-lg sm:text-2xl text-center">
                         © Created by Joao Pedro de Paula.
                     </p>
                 </div>

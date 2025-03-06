@@ -22,7 +22,7 @@ export const Navbar = () => {
     ];
 
     return (
-        <header className="w-full grid my-2 font-semibold px-[0.7em] sm:px-[1.1em]">
+        <header className="w-full grid my-2 xs:mt-3 font-semibold px-[0.7em] sm:px-[1.1em]">
             <nav className="w-full flex justify-between center">
                 <div className="flex gap-1 items-center">
                     <span 
@@ -53,7 +53,7 @@ export const Navbar = () => {
                         }        
                         <div>
                             <Button
-                                className="font-semibold sm:text-sm lg:text-base hover:scale-105"
+                                className="font-semibold sm:text-base sm lg:text-base hover:scale-105"
                                 size={"lg"}
                             >
                                 Sign In

@@ -55,7 +55,7 @@ export const FeaturesSection = () => {
     return (
         <div className="margin-x-page pt-4">
             <div>
-                <h1 className="text-3xl sm:text-4xl text-start font-semibold">
+                <h1 className="text-3xl sm:text-5xl text-start font-semibold">
                     <strong className='text-green-theme'>
                         Discover</strong> our tools!
                 </h1>
@@ -80,7 +80,7 @@ export const FeaturesSection = () => {
                             </div>
                             <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 ml-8 sm:ml-20 p-3 z-50'>
                                 <div className='flex items-center gap-2'>
-                                    <h1 className="text-xl sm:text-2xl font-semibold">
+                                    <h1 className="text-xl sm:text-3xl font-semibold">
                                         { item.title}
                                     </h1>
                                     <span>
@@ -88,7 +88,7 @@ export const FeaturesSection = () => {
                                     </span>
                                 </div>
                                 <div>
-                                    <p className='sm:text-lg text-gray-800 dark:text-gray-200'>
+                                    <p className='sm:text-xl text-gray-800 dark:text-gray-200'>
                                         { item.description }
                                     </p>
                                 </div>

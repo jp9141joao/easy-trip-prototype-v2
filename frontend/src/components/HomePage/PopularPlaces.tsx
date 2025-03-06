@@ -147,14 +147,14 @@ export const PopularPlaces = () => {
     }
     
     return (
-        <div className="margin-x-page py-5">
+        <div className="margin-x-page pb-5">
             <div className='grid gap-1'>
-                <h1 className="text-4xl font-semibold">
+                <h1 className="text-3xl sm:text-5xl font-semibold">
                     <strong className='text-green-theme'>
                         Popular
                     </strong> Places!
                 </h1>
-                <p className='text-gray-800 dark:text-gray-200'>
+                <p className='text-lg sm:text-2xl text-gray-800 dark:text-gray-200'>
                     Explore the most popular destinations and plan unforgettable experiences.
                 </p>
             </div>
@@ -228,7 +228,7 @@ export const PopularPlaces = () => {
                                     Go to this place
                             </Button>
                         </div>
-                        <div className='px-6 pt-6 sm:pt-0'>
+                        <div>
                             <img 
                                 src={ places[selectedPlace].sheetImage }
                                 alt={ places[selectedPlace].city }
@@ -239,9 +239,12 @@ export const PopularPlaces = () => {
                     </SheetContent>
                 </Sheet>
             </div>
-            <div className="flex gap-2 py-7 sm:px-20">
-                <h1 className="text-2xl sm:text-3xl text-center font-semibold">
-                    "No more counting <span className="underline text-green-theme">dollars</span>, we'll be counting <span className="underline text-green-theme inline-flex items-center whitespace-nowrap">stars</span>"
+            <div className="grid gap-3 py-7 sm: text-2xl sm:text-4xl text-center font-semibold">
+                <h1>
+                    "No more counting <span className="underline text-green-theme">dollars</span>,
+                </h1>
+                <h1>
+                    we'll be counting <span className="underline text-green-theme inline-flex items-center whitespace-nowrap">stars</span>"
                 </h1>
             </div>
         </div>
