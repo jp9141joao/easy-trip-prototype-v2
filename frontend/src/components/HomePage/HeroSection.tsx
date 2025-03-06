@@ -12,7 +12,7 @@ export const HeroSection = () => {
     }, []);
 
     return (
-        <div className="grid place-items-center items-center gap-4 py-5 px-[1.7rem]">
+        <div className="grid place-items-center items-center gap-4 py-5 margin-x-page">
             <div className="">
                 <img 
                     src={ Image }
@@ -22,19 +22,19 @@ export const HeroSection = () => {
                 />
             </div>
             <div className="text-start">
-                <h1 className="text-3xl font-semibold">
+                <h1 className="text-3xl sm:text-4xl font-semibold">
                     Your Next Adventure <strong className="text-green-theme">
                                             Awaits!
                                         </strong>       
                 </h1>
-                <p className="text-lg text-gray-800 dark:text-gray-200 break-words">
+                <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-200 break-words">
                     Explore breathtaking destinations and create unforgettable memories.
                 </p>
             </div>
             <div className="w-full items-left">
                 <Button
                     size={"xl"}
-                    className="text-base font-semibold"
+                    className="text-base sm:text-lg font-semibold"
                     onClick={() => {
                         window.scrollTo({
                             top: document.documentElement.scrollHeight,
@@ -45,28 +45,28 @@ export const HeroSection = () => {
                     Learn more
                 </Button>
             </div>
-            <div className="w-full grid place-items-center items-center grid-cols-2 gap-3 pt-3">
+            <div className="w-full grid place-items-center items-center grid-cols-2 gap-3 xs:gap-4 pt-3">
                 <div className="card-layout">
-                    <MdOutlineTravelExplore className="size-12 my-2"/>
-                    <p className="text-center p-1">                    
-                        Centralize travel details to build trips tailored to your interests.
+                    <MdOutlineTravelExplore className="size-12 sm:size-14 my-2"/>
+                    <p className="sm:text-lg text-center p-1">                    
+                        Centralize travel details efficiently to build trips tailored to your interests.
                     </p>
                 </div>
                 <div className="card-layout">
-                    <MdOutlineAccessTime className="size-12 my-2"/>
-                    <p className="text-center p-1">
+                    <MdOutlineAccessTime className="size-12 sm:size-14 my-2"/>
+                    <p className="sm:text-lg text-center p-1">
                         Keep all details in one place to streamline planning and save time.                    
                     </p>
                 </div>
                 <div className="card-layout">
-                    <LuReceipt className="size-12 my-2"/>
-                    <p className="text-center p-1">
+                    <LuReceipt className="size-12 sm:size-14 my-2"/>
+                    <p className="sm:text-lg text-center p-1">
                         Compare prices and discover deals to maximize your travel budget.                    
                     </p>
                 </div>
                 <div className="card-layout">
-                    <LuPartyPopper className="size-12 my-2"/>
-                    <p className="text-center p-1">
+                    <LuPartyPopper className="size-12 sm:size-14 my-2"/>
+                    <p className="sm:text-lg text-center p-1">
                         Travel stress-free with a well-organized plan that reduces surprises.                    
                     </p>
                 </div>

@@ -22,19 +22,19 @@ export const Navbar = () => {
     ];
 
     return (
-        <header className="w-full grid my-2 font-semibold px-[0.7em]">
+        <header className="w-full grid my-2 font-semibold px-[0.7em] sm:px-[1.1em]">
             <nav className="w-full flex justify-between center">
                 <div className="flex gap-1 items-center">
                     <span 
-                        className="block bg-green-theme h-[1.7em] xs:h-[1.9em] lg:h-[2em] w-1"
+                        className="block bg-green-theme h-[1.7em] sm:h-[1.9em] lg:h-[2em] w-1"
                     />
-                    <h1 className="text-2xl sm:text-xl lg:text-2xl"> 
+                    <h1 className="text-2xl lg:text-2xl"> 
                         Easy Trip
                     </h1>
                 </div>
                 <div className="flex items-center gap-1 lg:gap-5">
                     <div 
-                        className="hidden sm:flex sm:gap-5 lg:gap-7 items-center"
+                        className="hidden sm:flex sm:gap-4 lg:gap-7 items-center"
                     >
                         {
                             navItems.map((item: any, index: number) => (
