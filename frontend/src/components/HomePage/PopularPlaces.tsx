@@ -18,6 +18,7 @@ import ImageAthensDialog from '../../assets/home/athens-dialog.jpg';
 import { TbHandClick } from "react-icons/tb";
 import { 
     Carousel, 
+    CarouselApi, 
     CarouselContent, 
     CarouselItem 
 } from '../ui/carousel';
@@ -28,6 +29,21 @@ import { preload } from 'react-dom';
 export const PopularPlaces = () => {
     const [ selectedPlace, setSelectedPlace ] = useState<number>(0);
     const [ showSheet, setShowSheet ] = useState<boolean>(false);
+    const [ position, setPosition ] = useState<number>(0); 
+    const [api, setApi] = useState<CarouselApi>();
+
+    useEffect(() => {
+        if (!api) {
+          return;
+        }
+     
+        setPosition(api.selectedScrollSnap() + 1);
+     
+        api.on("select", () => {
+          setPosition(api.selectedScrollSnap() + 1);
+        });
+
+    }, [api]);
 
     useEffect(() => {
         const images = [
@@ -53,7 +69,7 @@ export const PopularPlaces = () => {
             preload(img, { as: 'image' });
         });
 
-    }, [])
+    }, []);
 
     const places = [
         {
@@ -147,7 +163,7 @@ export const PopularPlaces = () => {
     }
     
     return (
-        <div className="margin-x-page pb-5">
+        <div className="margin-x-page py-5">
             <div className='grid gap-1'>
                 <h1 className="text-3xl sm:text-5xl font-semibold">
                     <strong className='text-green-theme'>
@@ -159,13 +175,19 @@ export const PopularPlaces = () => {
                 </p>
             </div>
             <div className='my-5'>
-                <Carousel className="w-full">
+                <Carousel 
+                    setApi={setApi}
+                    className="w-full"
+                >
                     <CarouselContent className=''>
                         {
                             places.map((item: any, index: number) => (
                                 <CarouselItem 
                                     key={index}
-                                    className='basis-[68vw] xs:basis-[58vw] sm:basis-[48.5vw]'
+                                    className={`
+                                        basis-[68vw] xs:basis-[58vw] sm:basis-[48.5vw] lg:basis-[26vw]
+                                        ${ position > 1 && position < places.length - 2 ? 'p-0' : '' }
+                                    `}
                                     onClick={() => {
                                         setSelectedPlace(index);
                                         setShowSheet(true);
@@ -176,10 +198,10 @@ export const PopularPlaces = () => {
                                             src={ item.cardImage }
                                             alt={ item.city }
                                             loading='eager'
-                                            className='w-[64vw] xs:w-[54vw] sm:w-[45vw] h-[122vw] xs:h-[108vw] sm:h-[90vw] rounded-3xl z-0'
+                                            className='w-[64vw] xs:w-[54vw] sm:w-[45vw] lg:w-[24vw] h-[122vw] xs:h-[108vw] sm:h-[90vw] lg:h-[44vw] rounded-3xl z-0'
                                         />
                                     </div>
-                                    <div className='absolute top-0 pl-[51vw] xs:pl-[43.5vw] sm:pl-[36.2vw] py-5 z-10'>
+                                    <div className='absolute top-0 pl-[51vw] xs:pl-[43.5vw] sm:pl-[36.2vw] lg:pl-[19.3vw] py-5 z-10'>
                                         <TbHandClick className='icon-responsive text-white'/>
                                     </div>
                                     <div className='absolute bottom-0 z-50 p-4'>
@@ -205,7 +227,7 @@ export const PopularPlaces = () => {
                 >
                     <SheetContent 
                         side='bottom' 
-                        className='xs:mx-[8vw] sm:mx-[12vw] xs:mb-[5.5vh] xs:mb-[13vh] xs:rounded-2xl'
+                        className='xs:mx-[8vw] sm:mx-[12vw] xs:mb-[5.5vh] xs:rounded-2xl'
                     >
                         <div className='grid place-items-start gap-1 px-7 pt-7'>
                                 <div>
@@ -228,7 +250,7 @@ export const PopularPlaces = () => {
                                     Go to this place
                             </Button>
                         </div>
-                        <div>
+                        <div className='px-6 pt-6 sm:pt-0'>
                             <img 
                                 src={ places[selectedPlace].sheetImage }
                                 alt={ places[selectedPlace].city }
@@ -239,12 +261,9 @@ export const PopularPlaces = () => {
                     </SheetContent>
                 </Sheet>
             </div>
-            <div className="grid gap-3 py-7 sm: text-2xl sm:text-4xl text-center font-semibold">
-                <h1>
-                    "No more counting <span className="underline text-green-theme">dollars</span>,
-                </h1>
-                <h1>
-                    we'll be counting <span className="underline text-green-theme inline-flex items-center whitespace-nowrap">stars</span>"
+            <div className="py-7 sm:px-20 lg:px-56">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold leading-12">
+                    "No more counting <span className="underline text-green-theme">dollars</span>, we'll be counting <span className="underline text-green-theme inline-flex items-center whitespace-nowrap">stars</span>"
                 </h1>
             </div>
         </div>

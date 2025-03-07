@@ -19,11 +19,11 @@
 }
 
 .card-layout {
-  @apply grid place-items-center h-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-3xl p-3 shadow-sm;
+  @apply grid place-items-center h-full lg:hover:-translate-y-3 duration-300 transform bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-3xl p-3 shadow-sm;
 }
 
 .margin-x-page {
-  @apply mx-[1.7em] sm:px-[2.8em]
+  @apply mx-[1.7em] sm:mx-[2.8em] lg:mx-[2.1em]
 }
 
 :root {

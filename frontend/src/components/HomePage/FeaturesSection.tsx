@@ -53,49 +53,84 @@ export const FeaturesSection = () => {
     ];
 
     return (
-        <div className="margin-x-page pt-4">
+        <div className="margin-x-page">
             <div>
                 <h1 className="text-3xl sm:text-5xl text-start font-semibold">
                     <strong className='text-green-theme'>
                         Discover</strong> our tools!
                 </h1>
             </div>
-            <div className="grid mt-4">
-                {
-                    features.map((item: any, index: number) => (
-                        <div 
-                            key={index}
-                            className={`
-                                grid
-                                
-                            `}
-                        >
-                            <div >
-                                <img 
-                                    src={ item.url }
-                                    alt={ item.title }
-                                    loading='eager'
-                                    className='rounded-2xl'                                
-                                />
-                            </div>
-                            <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 ml-8 sm:ml-20 p-3 z-50'>
-                                <div className='flex items-center gap-2'>
-                                    <h1 className="text-xl sm:text-3xl font-semibold">
-                                        { item.title}
-                                    </h1>
-                                    <span>
-                                        { item.icon }
-                                    </span>
-                                </div>
+            <div className="w-full grid lg:grid-cols-2 lg:gap-16 mt-6">
+                <div>
+                    {
+                        features.map((item: any, index: number) => (
+                            index < 2 &&
+                            <div 
+                                key={index}
+                                className='grid'
+                            >
                                 <div>
-                                    <p className='sm:text-xl text-gray-800 dark:text-gray-200'>
-                                        { item.description }
-                                    </p>
+                                    <img 
+                                        src={ item.url }
+                                        alt={ item.title }
+                                        loading='eager'
+                                        className='rounded-2xl'                                
+                                    />
+                                </div>
+                                <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50'>
+                                    <div className='flex gap-2'>
+                                        <h1 className="text-xl sm:text-3xl font-semibold">
+                                            { item.title}
+                                        </h1>
+                                        <span>
+                                            { item.icon }
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <p className='sm:text-xl text-gray-800 dark:text-gray-200'>
+                                            { item.description }
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
+                <div className='lg:mt-36'>
+                    {
+                        features.map((item: any, index: number) => (
+                            index > 1 &&
+                            <div 
+                                key={index}
+                                className='grid'
+                            >
+                                <div>
+                                    <img 
+                                        src={ item.url }
+                                        alt={ item.title }
+                                        loading='eager'
+                                        className='rounded-2xl'                                
+                                    />
+                                </div>
+                                <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50'>
+                                    <div className='flex gap-2'>
+                                        <h1 className="text-xl sm:text-3xl font-semibold">
+                                            { item.title}
+                                        </h1>
+                                        <span>
+                                            { item.icon }
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <p className='sm:text-xl text-gray-800 dark:text-gray-200'>
+                                            { item.description }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
