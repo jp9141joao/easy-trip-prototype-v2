@@ -3,18 +3,17 @@ import { FeaturesSection } from "../components/HomePage/FeaturesSection";
 import { HeroSection } from "../components/HomePage/HeroSection";
 import { PopularPlaces } from "../components/HomePage/PopularPlaces";
 import { Navbar } from "../components/Navbar";
+import LayoutPage from "../components/ui/LayoutPage";
 
 export function Home() {
 
     return (
-        <div className='grid place-items-center items-center'>
-            <div className='max-w-[100rem]'>
-                <Navbar />
-                <HeroSection />
-                <FeaturesSection />
-                <PopularPlaces />
-                <Footer />
-            </div>
-        </div>
+        <LayoutPage>
+            <Navbar />
+            <HeroSection />
+            <FeaturesSection />
+            <PopularPlaces />
+            <Footer />
+        </LayoutPage>
     )
 }
