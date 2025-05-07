@@ -1,11 +1,37 @@
-import CloseForm from "../components/CloseForm";
+import { useState } from "react";
+import HeaderForm from "../components/HeaderForm";
+import RegisterRedirect from "../components/SignInPage/RegisterRedirect";
+import BrandSection from "../components/SignUpPage/BrandSection";
+import SignUpFormSection from "../components/SignUpPage/SignUpFormSection";
 import LayoutPage from "../components/ui/LayoutPage";
 
 export default function SignIn() {
 
+    const [ fullName, setFullName ] = useState<string>("");
+    const [ email, setEmail ] = useState<string>("");
+    const [ password, setPassword ] = useState<string>("");
+    const [ loading, setLoading ] = useState<boolean>(false);
+
     return (
         <LayoutPage>
-            <CloseForm />
+            <HeaderForm 
+                goBackTo="/signIn"
+                closeTo="/home"
+            />
+            <div className="grid grid-col place-items-center h-screen">
+                <div>
+                    <BrandSection />
+                    <SignUpFormSection
+                        loading={ loading }
+                        fullName={ fullName }
+                        setFullName={ setFullName }
+                        email={ email }
+                        setEmail={ setEmail }
+                        password={ password }
+                        setPassword={ setPassword }
+                    />
+                </div>
+            </div>
         </LayoutPage>
     )
 }

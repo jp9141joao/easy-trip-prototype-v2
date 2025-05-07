@@ -185,8 +185,7 @@ export const PopularPlaces = () => {
                                 <CarouselItem 
                                     key={index}
                                     className={`
-                                        basis-[68vw] xs:basis-[58vw] sm:basis-[48.5vw] lg:basis-[26vw]
-                                        ${ position > 1 && position < places.length - 2 ? 'p-0' : '' }
+                                        basis-[68vw] xs:basis-[58vw] sm:basis-[48.5vw] lg:basis-[26vw] 
                                     `}
                                     onClick={() => {
                                         setSelectedPlace(index);
@@ -227,7 +226,7 @@ export const PopularPlaces = () => {
                 >
                     <SheetContent 
                         side='bottom' 
-                        className='xs:mx-[8vw] sm:mx-[12vw] xs:mb-[5.5vh] xs:rounded-2xl'
+                        className='xs:mx-[8vw] sm:mx-[12vw] xs:mb-[5.5vh] xs:rounded-2xl max-h-[90vh]'
                     >
                         <div className='grid place-items-start gap-1 px-7 pt-7'>
                                 <div>
@@ -247,7 +246,7 @@ export const PopularPlaces = () => {
                                 type="submit"
                                 className='w-full sm:w-1/2 font-semibold focus:outline-none'
                             >
-                                    Go to this place
+                                Go to this place
                             </Button>
                         </div>
                         <div className='px-6 pt-6 sm:pt-0'>
@@ -262,7 +261,7 @@ export const PopularPlaces = () => {
                 </Sheet>
             </div>
             <div className="py-7 sm:px-20 lg:px-56">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold leading-12">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold leading-9">
                     "No more counting <span className="underline text-green-theme">dollars</span>, we'll be counting <span className="underline text-green-theme inline-flex items-center whitespace-nowrap">stars</span>"
                 </h1>
             </div>

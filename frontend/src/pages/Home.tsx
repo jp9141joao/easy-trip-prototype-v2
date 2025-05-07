@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Footer } from "../components/Footer";
 import { FeaturesSection } from "../components/HomePage/FeaturesSection";
 import { HeroSection } from "../components/HomePage/HeroSection";
@@ -6,6 +7,9 @@ import { Navbar } from "../components/Navbar";
 import LayoutPage from "../components/ui/LayoutPage";
 
 export function Home() {
+
+    const [ w, setW ] = useState<number>(window.innerWidth);
+    const [ h, setH ] = useState<number>(window.innerHeight);
 
     return (
         <LayoutPage>

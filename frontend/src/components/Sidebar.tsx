@@ -6,12 +6,13 @@ import {
   SheetTrigger,
 } from "./ui/sheet"
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Button } from "./ui/button";
 
 export const Sidebar = () => {
     
     const [ showSheet, setShowSheet ] = useState<boolean>(false);
+    const navigate = useNavigate();
     const items = [
         {
             name: 'Discover',
@@ -87,13 +88,13 @@ export const Sidebar = () => {
                         <Button
                             type="button"
                             className="w-full rounded-3xl font-semibold focus:outline-none"
+                            onClick={() => navigate("/signIn")}
                         >
                             Sign in
                         </Button>
+                    </div>
                 </div>
-                </div>
-                
-                <div className="w-full absolute bottom-0">
+                <div className="w-full absolute bottom-0 my-2">
                     <p className="text-center">
                         Created by Joao Pedro de Paula.
                     </p>
