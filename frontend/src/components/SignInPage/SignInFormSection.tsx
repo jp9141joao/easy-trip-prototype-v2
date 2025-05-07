@@ -10,7 +10,7 @@ export default function SignInFormSection
 {
 
     return (
-        <div className="grid gap-4 mt-4 min-w-[80vw]">
+        <div className="grid gap-4 mt-4">
             <div className="grid gap-2">
                 <Label htmlFor="email">
                     E-mail
