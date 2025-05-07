@@ -3,6 +3,7 @@ import HeaderForm from "../components/HeaderForm";
 import BrandSection from "../components/SignUpPage/BrandSection";
 import SignUpFormSection from "../components/SignUpPage/SignUpFormSection";
 import LayoutPage from "../components/ui/LayoutPage";
+import LoginGoogle from "../components/LoginGoogle";
 
 export default function SignIn() {
 
@@ -30,6 +31,9 @@ export default function SignIn() {
                         setEmail={ setEmail }
                         password={ password }
                         setPassword={ setPassword }
+                    />
+                    <LoginGoogle 
+                        type="Register"
                     />
                 </div>
             </div>

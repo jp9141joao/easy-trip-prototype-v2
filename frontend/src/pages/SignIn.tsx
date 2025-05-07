@@ -4,6 +4,7 @@ import RegisterRedirect from "../components/SignInPage/RegisterRedirect";
 import WelcomeSection from "../components/SignInPage/WelcomeSection";
 import LayoutPage from "../components/ui/LayoutPage";
 import { useEffect, useState } from "react";
+import LoginGoogle from "../components/LoginGoogle";
 
 export default function SignIn() {
 
@@ -31,6 +32,9 @@ export default function SignIn() {
                         setPassword={ setPassword }
                     />
                     <RegisterRedirect />
+                    <LoginGoogle 
+                        type="Login"
+                    />
                 </div>
             </div>
         </LayoutPage>
