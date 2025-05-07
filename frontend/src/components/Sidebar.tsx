@@ -6,7 +6,7 @@ import {
   SheetTrigger,
 } from "./ui/sheet"
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "./ui/button";
 
 export const Sidebar = () => {

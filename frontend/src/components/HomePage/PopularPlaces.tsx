@@ -18,7 +18,7 @@ import ImageAthensDialog from '../../assets/home/athens-dialog.jpg';
 import { TbHandClick } from "react-icons/tb";
 import { 
     Carousel, 
-    CarouselApi, 
+    //CarouselApi, 
     CarouselContent, 
     CarouselItem 
 } from '../ui/carousel';
@@ -29,9 +29,10 @@ import { preload } from 'react-dom';
 export const PopularPlaces = () => {
     const [ selectedPlace, setSelectedPlace ] = useState<number>(0);
     const [ showSheet, setShowSheet ] = useState<boolean>(false);
-    const [ position, setPosition ] = useState<number>(0); 
-    const [api, setApi] = useState<CarouselApi>();
+    //const [ position, setPosition ] = useState<number>(0); 
+    //const [api, setApi] = useState<CarouselApi>();
 
+    /*
     useEffect(() => {
         if (!api) {
           return;
@@ -44,6 +45,7 @@ export const PopularPlaces = () => {
         });
 
     }, [api]);
+    */
 
     useEffect(() => {
         const images = [
@@ -176,7 +178,7 @@ export const PopularPlaces = () => {
             </div>
             <div className='my-5'>
                 <Carousel 
-                    setApi={setApi}
+                    //setApi={setApi}
                     className="w-full"
                 >
                     <CarouselContent className=''>

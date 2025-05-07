@@ -54,7 +54,7 @@ export default function SignUpFormSection
                     placeholder="Abc1234#"
                     className="rounded-4xl border-black dark:border-white" 
                 />
-            </div> 
+            </div>
             <div>
                 <Button
                     size={"xl"}
