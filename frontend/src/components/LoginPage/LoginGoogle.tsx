@@ -1,6 +1,6 @@
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
-import IconGoogle from "../assets/login/icon-google.png"
+import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
+import IconGoogle from "../../assets/login/icon-google.png"
 
 export default function LoginGoogle({ type }: { type: 'Login' | 'Register' }) {
 

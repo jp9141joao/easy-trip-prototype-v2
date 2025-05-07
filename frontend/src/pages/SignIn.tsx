@@ -1,18 +1,30 @@
-import HeaderForm from "../components/HeaderForm";
-import SignInFormSection from "../components/SignInPage/SignInFormSection";
-import RegisterRedirect from "../components/SignInPage/RegisterRedirect";
-import WelcomeSection from "../components/SignInPage/WelcomeSection";
+import HeaderForm from "../components/LoginPage/HeaderForm";
+
 import LayoutPage from "../components/ui/LayoutPage";
 import { useEffect, useState } from "react";
-import LoginGoogle from "../components/LoginGoogle";
+import LoginGoogle from "../components/LoginPage/LoginGoogle";
+import WelcomeSection from "../components/LoginPage/SignInPage/WelcomeSection";
+import SignInFormSection from "../components/LoginPage/SignInPage/SignInFormSection";
+import RegisterRedirect from "../components/LoginPage/SignInPage/RegisterRedirect";
 
 export default function SignIn() {
 
     const [ email, setEmail ] = useState<string>("");
     const [ password, setPassword ] = useState<string>("");
     const [ loading, setLoading ] = useState<boolean>(false);
+
+    const handleSignIn = () => {
+
+    }
     
     useEffect(() => {
+        const token = localStorage.getItem('authToken');
+
+        if (token) {
+            localStorage.removeItem('authToken');
+            window.location.reload();
+        }
+
         setLoading(false);
     }, []);
 
@@ -30,6 +42,7 @@ export default function SignIn() {
                         setEmail={ setEmail }
                         password={ password }
                         setPassword={ setPassword }
+                        handleSignIn={ handleSignIn }
                     />
                     <RegisterRedirect />
                     <LoginGoogle 

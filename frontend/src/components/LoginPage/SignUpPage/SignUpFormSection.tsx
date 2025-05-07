@@ -1,16 +1,35 @@
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
+import { Button } from "../../ui/button"
+import { Input } from "../../ui/input"
+import { Label } from "../../ui/label"
 
-export default function SignInFormSection
+export default function SignUpFormSection
 (
-    { loading, email, setEmail, password, setPassword }:
-    { loading: boolean, email: string, setEmail: (value:  string) => void, password: string, setPassword: (value: string) => void }
+    { loading, fullName, setFullName, email, setEmail, password, setPassword, handleSignUp }:
+    { 
+        loading: boolean, 
+        fullName: string, setFullName: (value: string) => void, 
+        email: string, setEmail: (value: string) => void,
+        password: string, setPassword: (value: string) => void,
+        handleSignUp: () => void
+    }
 ) 
 {
 
     return (
         <div className="grid gap-4 mt-4">
+            <div className="grid gap-2">
+                <Label htmlFor="fullName">
+                    Full Name
+                </Label>
+                <Input
+                    id="fullName"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    onClick={() => null}
+                    placeholder="Your full name"
+                    className="rounded-4xl border-black dark:border-white" 
+                />
+            </div>
             <div className="grid gap-2">
                 <Label htmlFor="email">
                     E-mail
@@ -21,7 +40,7 @@ export default function SignInFormSection
                     onChange={(e) => setEmail(e.target.value)}
                     onClick={() => null}
                     placeholder="your@email.com"
-                    className="rounded-4xl border-black dark:border-white"
+                    className="rounded-4xl border-black dark:border-white" 
                 />
             </div>
             <div className="grid gap-2">
@@ -34,7 +53,7 @@ export default function SignInFormSection
                     onChange={(e) => setPassword(e.target.value)}
                     onClick={() => null}
                     placeholder="Abc1234#"
-                    className="rounded-4xl border-black dark:border-white"
+                    className="rounded-4xl border-black dark:border-white" 
                 />
             </div>
             <div>
@@ -55,5 +74,5 @@ export default function SignInFormSection
                 </Button>
             </div>
         </div>
-    );
+    )
 }

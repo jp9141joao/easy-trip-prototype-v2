@@ -1,9 +1,9 @@
-import { useState } from "react";
-import HeaderForm from "../components/HeaderForm";
-import BrandSection from "../components/SignUpPage/BrandSection";
-import SignUpFormSection from "../components/SignUpPage/SignUpFormSection";
+import { useEffect, useState } from "react";
+import HeaderForm from "../components/LoginPage/HeaderForm";
 import LayoutPage from "../components/ui/LayoutPage";
-import LoginGoogle from "../components/LoginGoogle";
+import LoginGoogle from "../components/LoginPage/LoginGoogle";
+import BrandSection from "../components/LoginPage/SignUpPage/BrandSection";
+import SignUpFormSection from "../components/LoginPage/SignUpPage/SignUpFormSection";
 
 export default function SignIn() {
 
@@ -12,7 +12,21 @@ export default function SignIn() {
     const [ password, setPassword ] = useState<string>("");
     const [ loading, setLoading ] = useState<boolean>(false);
 
-    () => setLoading(false);
+    const handleSignUp = () => {
+
+    };
+
+    useEffect(() => {
+        
+        const token = localStorage.getItem('authToken');
+
+        if (token) {
+            localStorage.removeItem('authToken');
+            window.location.reload();
+        }
+
+        setLoading(false);
+    }, []);
 
     return (
         <LayoutPage>
@@ -31,6 +45,7 @@ export default function SignIn() {
                         setEmail={ setEmail }
                         password={ password }
                         setPassword={ setPassword }
+                        handleSignUp={ handleSignUp }
                     />
                     <LoginGoogle 
                         type="Register"
