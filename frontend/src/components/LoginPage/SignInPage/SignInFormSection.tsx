@@ -1,3 +1,4 @@
+import { IoAlertCircleOutline } from "react-icons/io5";
 import { Button } from "../../ui/button";
 import { Input } from "../../ui/input";
 import { Label } from "../../ui/label";
@@ -5,12 +6,14 @@ import { Label } from "../../ui/label";
 
 export default function SignInFormSection
 (
-    { loading, email, setEmail, password, setPassword, handleSignIn }:
+    { loading, email, setEmail, password, setPassword, handleSignIn, errorMessage, errorOrigin }:
     { 
         loading: boolean, 
         email: string, setEmail: (value:  string) => void, 
         password: string, setPassword: (value: string) => void,
-        handleSignIn: () => void
+        handleSignIn: () => void,
+        errorMessage: string,
+        errorOrigin: string
     }
 ) 
 {
@@ -27,7 +30,10 @@ export default function SignInFormSection
                     onChange={(e) => setEmail(e.target.value)}
                     onClick={() => null}
                     placeholder="your@email.com"
-                    className="rounded-4xl border-black dark:border-white"
+                    className={`
+                        rounded-4xl
+                        ${errorOrigin === "email" ? "border-red-500" : "border-black dark:border-white"}
+                    `}
                 />
             </div>
             <div className="grid gap-2">
@@ -40,9 +46,22 @@ export default function SignInFormSection
                     onChange={(e) => setPassword(e.target.value)}
                     onClick={() => null}
                     placeholder="Abc1234#"
-                    className="rounded-4xl border-black dark:border-white"
+                    className={`
+                        rounded-4xl
+                        ${errorOrigin === "password" ? "border-red-500" : "border-black dark:border-white"}
+                    `}
                 />
             </div>
+            { 
+                errorMessage && (
+                    <div className="flex items-center gap-2 text-red-500">
+                        <IoAlertCircleOutline size={20} />
+                        <span>  
+                            {errorMessage}  
+                        </span>
+                    </div>
+                )
+            }
             <div>
                 <Button
                     size={"xl"}

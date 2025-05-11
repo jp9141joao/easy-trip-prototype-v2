@@ -6,17 +6,47 @@ import LoginGoogle from "../components/LoginPage/LoginGoogle";
 import WelcomeSection from "../components/LoginPage/SignInPage/WelcomeSection";
 import SignInFormSection from "../components/LoginPage/SignInPage/SignInFormSection";
 import RegisterRedirect from "../components/LoginPage/SignInPage/RegisterRedirect";
+import { SignInUser } from "../service/api";
 
 export default function SignIn() {
 
     const [ email, setEmail ] = useState<string>("");
     const [ password, setPassword ] = useState<string>("");
     const [ loading, setLoading ] = useState<boolean>(false);
+    const [ errorMessage, setErrorMessage ] = useState<string>("");
+    const [ errorOrigin, setErrorOrigin ] = useState<string>("");
 
-    const handleSignIn = () => {
+    const handleSignIn = async () => {
+        setLoading(true);
 
+        if (!email) {
+            setErrorMessage("Email is required");
+            setErrorOrigin("email");
+            setLoading(false);
+            return;
+        }
+
+        if (!password) {
+            setErrorMessage("Password is required");
+            setErrorOrigin("password");
+            setLoading(false);
+            return;
+        }
+        
+        try {
+            const response = await SignInUser(email, password);
+
+            const { token } = response.data;
+            localStorage.setItem("authToken", token);
+            window.location.reload();
+
+        } catch (error) {
+            alert(error)
+        } finally {
+            setLoading(false);
+        }
     }
-    
+
     useEffect(() => {
         const token = localStorage.getItem('authToken');
 
@@ -26,7 +56,7 @@ export default function SignIn() {
         }
 
         setLoading(false);
-    }, []);
+    }, []); 
 
     return (
         <LayoutPage>
@@ -43,6 +73,8 @@ export default function SignIn() {
                         password={ password }
                         setPassword={ setPassword }
                         handleSignIn={ handleSignIn }
+                        errorMessage={ errorMessage }
+                        errorOrigin={ errorOrigin }
                     />
                     <RegisterRedirect />
                     <LoginGoogle 
