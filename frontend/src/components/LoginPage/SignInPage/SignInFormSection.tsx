@@ -32,7 +32,7 @@ export default function SignInFormSection
                     placeholder="your@email.com"
                     className={`
                         rounded-4xl
-                        ${errorOrigin === "email" ? "border-red-500" : "border-black dark:border-white"}
+                        ${errorOrigin === "E-mail" || errorOrigin === "E-mail and Password" ? "border-red-500" : "border-black dark:border-white"}
                     `}
                 />
             </div>
@@ -48,7 +48,7 @@ export default function SignInFormSection
                     placeholder="Abc1234#"
                     className={`
                         rounded-4xl
-                        ${errorOrigin === "password" ? "border-red-500" : "border-black dark:border-white"}
+                        ${errorOrigin === "Password" || errorOrigin === "E-mail and Password" ? "border-red-500" : "border-black dark:border-white"}
                     `}
                 />
             </div>

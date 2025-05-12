@@ -6,13 +6,15 @@ import { IoAlertCircleOutline } from "react-icons/io5";
 
 export default function SignUpFormSection
 (
-    { loading, fullName, setFullName, email, setEmail, password, setPassword, handleSignUp }:
+    { loading, fullName, setFullName, email, setEmail, password, setPassword, handleSignUp, errorMessage, errorOrigin }:
     { 
         loading: boolean, 
         fullName: string, setFullName: (value: string) => void, 
         email: string, setEmail: (value: string) => void,
         password: string, setPassword: (value: string) => void,
-        handleSignUp: () => void
+        handleSignUp: () => void,
+        errorMessage: string,
+        errorOrigin: string
     }
 ) 
 {
@@ -29,7 +31,10 @@ export default function SignUpFormSection
                     onChange={(e) => setFullName(e.target.value)}
                     onClick={() => null}
                     placeholder="Your full name"
-                    className="rounded-4xl border-black dark:border-white" 
+                    className={`
+                        rounded-4xl border-black dark:border-white
+                        ${errorOrigin === "Full Name" || errorOrigin === "E-mail and Password" ? "border-red-500" : "border-black dark:border-white"}
+                    `} 
                 />
             </div>
             <div className="grid gap-2">
@@ -42,7 +47,10 @@ export default function SignUpFormSection
                     onChange={(e) => setEmail(e.target.value)}
                     onClick={() => null}
                     placeholder="your@email.com"
-                    className="rounded-4xl border-black dark:border-white" 
+                    className={`
+                        rounded-4xl border-black dark:border-white
+                        ${errorOrigin === "E-mail" || errorOrigin === "E-mail and Password" ? "border-red-500" : "border-black dark:border-white"}
+                    `} 
                 />
             </div>
             <div className="grid gap-2">
@@ -55,7 +63,10 @@ export default function SignUpFormSection
                     onChange={(e) => setPassword(e.target.value)}
                     onClick={() => null}
                     placeholder="Abc1234#"
-                    className="rounded-4xl border-black dark:border-white" 
+                    className={`
+                        rounded-4xl border-black dark:border-white
+                        ${errorOrigin === "Password" || errorOrigin === "E-mail and Password" ? "border-red-500" : "border-black dark:border-white"}
+                    `} 
                 />
             </div>
             <div>

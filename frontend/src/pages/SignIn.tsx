@@ -7,6 +7,9 @@ import WelcomeSection from "../components/LoginPage/SignInPage/WelcomeSection";
 import SignInFormSection from "../components/LoginPage/SignInPage/SignInFormSection";
 import RegisterRedirect from "../components/LoginPage/SignInPage/RegisterRedirect";
 import { SignInUser } from "../service/api";
+import { isAxiosError } from "axios";
+import { UtensilsIcon } from "lucide-react";
+import { Utils } from "../utils/Utils";
 
 export default function SignIn() {
 
@@ -18,9 +21,17 @@ export default function SignIn() {
 
     const handleSignIn = async () => {
         setLoading(true);
+        setErrorMessage("");
+        setErrorOrigin("");
 
         if (!email) {
             setErrorMessage("Email is required");
+            setErrorOrigin("email");
+            setLoading(false);
+            return;
+
+        } else if (!Utils.isValidEmail(email)) {
+            setErrorMessage("Invalid email format");
             setErrorOrigin("email");
             setLoading(false);
             return;
@@ -31,6 +42,13 @@ export default function SignIn() {
             setErrorOrigin("password");
             setLoading(false);
             return;
+
+        } else if (!Utils.isValidPassword(password)) {
+            setErrorMessage("Password must contain at least 8 characters, including uppercase letters, numbers, and special characters");
+            setErrorOrigin("password");
+            setLoading(false);
+            return;
+
         }
         
         try {
@@ -41,7 +59,33 @@ export default function SignIn() {
             window.location.reload();
 
         } catch (error) {
-            alert(error)
+            
+            if (isAxiosError(error)) {
+
+                const message = error.message;
+                
+                if (message.includes("E-mail") && message.includes("Password")) {
+                    
+                    setErrorOrigin("E-mail and Password");
+
+                } else if (message.includes("E-mail")) {
+
+                    setErrorOrigin("E-mail");
+
+                } else if (message.includes("Password")) {
+
+                    setErrorOrigin("Password");
+
+                }
+
+                setErrorMessage(message);
+            
+            } else {
+                
+                setErrorMessage("An unexpected error occurred while signing in. Please try again later.");
+
+            }
+
         } finally {
             setLoading(false);
         }
@@ -49,7 +93,7 @@ export default function SignIn() {
 
     useEffect(() => {
         const token = localStorage.getItem('authToken');
-
+  
         if (token) {
             localStorage.removeItem('authToken');
             window.location.reload();
