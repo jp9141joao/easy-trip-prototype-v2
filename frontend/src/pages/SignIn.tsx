@@ -1,5 +1,4 @@
 import HeaderForm from "../components/LoginPage/HeaderForm";
-
 import LayoutPage from "../components/ui/LayoutPage";
 import { useEffect, useState } from "react";
 import LoginGoogle from "../components/LoginPage/LoginGoogle";
@@ -7,8 +6,6 @@ import WelcomeSection from "../components/LoginPage/SignInPage/WelcomeSection";
 import SignInFormSection from "../components/LoginPage/SignInPage/SignInFormSection";
 import RegisterRedirect from "../components/LoginPage/SignInPage/RegisterRedirect";
 import { SignInUser } from "../service/api";
-import { isAxiosError } from "axios";
-import { UtensilsIcon } from "lucide-react";
 import { Utils } from "../utils/Utils";
 
 export default function SignIn() {
@@ -25,30 +22,31 @@ export default function SignIn() {
         setErrorOrigin("");
 
         if (!email) {
-            setErrorMessage("Email is required");
-            setErrorOrigin("email");
+            setErrorMessage("E-mail is required");
+            setErrorOrigin("E-mail");
             setLoading(false);
             return;
 
         } else if (!Utils.isValidEmail(email)) {
-            setErrorMessage("Invalid email format");
-            setErrorOrigin("email");
+            setErrorMessage("Invalid e-mail format");
+            setErrorOrigin("E-mail");
             setLoading(false);
             return;
+        
         }
 
         if (!password) {
             setErrorMessage("Password is required");
-            setErrorOrigin("password");
+            setErrorOrigin("Password");
             setLoading(false);
             return;
 
         } else if (!Utils.isValidPassword(password)) {
-            setErrorMessage("Password must contain at least 8 characters, including uppercase letters, numbers, and special characters");
-            setErrorOrigin("password");
+            setErrorMessage("Password is too weak");
+            setErrorOrigin("Password");
             setLoading(false);
             return;
-
+        
         }
         
         try {
@@ -58,33 +56,25 @@ export default function SignIn() {
             localStorage.setItem("authToken", token);
             window.location.reload();
 
-        } catch (error) {
+        } catch (error: any) {
             
-            if (isAxiosError(error)) {
-
-                const message = error.message;
-                
-                if (message.toUpperCase().includes("E-MAIL") && message.toUpperCase().includes("PASSWORD")) {
-                    
-                    setErrorOrigin("E-mail and Password");
-
-                } else if (message.toUpperCase().includes("E-MAIL")) {
-
-                    setErrorOrigin("E-mail");
-
-                } else if (message.toUpperCase().includes("PASSWORD")) {
-
-                    setErrorOrigin("Password");
-
-                }
-
-                setErrorMessage(message);
+            const message: string = error.toString();
             
-            } else {
+            if (message.toUpperCase().includes("E-MAIL") && message.toUpperCase().includes("PASSWORD")) {
                 
-                setErrorMessage("An unexpected error occurred while signing in. Please try again later.");
+                setErrorOrigin("E-mail and Password");
+
+            } else if (message.toUpperCase().includes("E-MAIL")) {
+
+                setErrorOrigin("E-mail");
+
+            } else if (message.toUpperCase().includes("PASSWORD")) {
+
+                setErrorOrigin("Password");
 
             }
+
+            setErrorMessage(message);
 
         } finally {
             setLoading(false);

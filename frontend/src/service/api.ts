@@ -15,8 +15,8 @@ export const SignInUser = async (email: string, password: string) => {
         localStorage.setItem('authToken', token);
 
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
         return response.data;
+
     } catch (error: any) {
 
         if (axios.isAxiosError(error)) {
@@ -24,7 +24,7 @@ export const SignInUser = async (email: string, password: string) => {
 
             if (response) {
                 const { data } = response;
-                throw new Error(data.message);
+                throw new Error(data.error);
             }
         } 
         
@@ -46,7 +46,6 @@ export const SignUpUser = async (fullName: string, email: string, password: stri
         return response.data;
 
     } catch (error: any) {
-
 
         if (axios.isAxiosError(error)) {
             const { response } = error;

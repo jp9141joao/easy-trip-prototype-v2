@@ -33,7 +33,7 @@ export default function SignUpFormSection
                     placeholder="Your full name"
                     className={`
                         rounded-4xl border-black dark:border-white
-                        ${errorOrigin === "Full Name" || errorOrigin === "E-mail and Password" ? "border-red-500 dark:border-red-400" : "border-black dark:border-white"}
+                        ${errorOrigin === "Full Name" || errorOrigin === "E-mail and Password" ? "border-red-500 placeholder:text-red-500 dark:border-red-400 dark:placeholder:text-red-400" : "border-black dark:border-white"}
                     `} 
                 />
             </div>
@@ -49,7 +49,7 @@ export default function SignUpFormSection
                     placeholder="your@email.com"
                     className={`
                         rounded-4xl border-black dark:border-white
-                        ${errorOrigin === "E-mail" || errorOrigin === "E-mail and Password" ? "border-red-500 dark:border-red-400" : "border-black dark:border-white"}
+                        ${errorOrigin === "E-mail" || errorOrigin === "E-mail and Password" ? "border-red-500 placeholder:text-red-500 dark:border-red-400 dark:placeholder:text-red-400" : "border-black dark:border-white"}
                     `} 
                 />
             </div>
@@ -65,13 +65,13 @@ export default function SignUpFormSection
                     placeholder="Abc1234#"
                     className={`
                         rounded-4xl border-black dark:border-white
-                        ${errorOrigin === "Password" || errorOrigin === "E-mail and Password" ? "border-red-500 dark:border-red-400" : "border-black dark:border-white"}
+                        ${errorOrigin === "Password" || errorOrigin === "E-mail and Password" ? "border-red-500 placeholder:text-red-500 dark:border-red-400 dark:placeholder:text-red-400" : "border-black dark:border-white"}
                     `} 
                 />
             </div>
              { 
                 errorMessage && (
-                    <div className="flex items-center gap-2 text-red-500 max-w-[80vw]">
+                    <div className="flex items-center gap-2 text-red-500 dark:text-red-400 max-w-[80vw]">
                         <IoAlertCircleOutline size={20} />
                         <span>  
                             {errorMessage}

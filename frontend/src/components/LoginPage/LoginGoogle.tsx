@@ -16,7 +16,7 @@ export default function LoginGoogle({ type }: { type: 'Login' | 'Register' }) {
             <div className="w-full">
                 <Button
                     variant={"outline"}
-                    className="w-full rounded-4xl bg-white border-black text-black hover:bg-white"
+                    className="w-full rounded-4xl bg-white border-black dark:border-gray-200 text-black hover:bg-white/85 hover:scale-100"
                 >
                     <img 
                         src={ IconGoogle }

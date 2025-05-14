@@ -7,7 +7,7 @@ export default function HeaderForm({ goBackTo, closeTo }: {goBackTo?: string, cl
 
     return (
         <div className={`
-                absolute right-0 flex justify-between items-center  px-[0.7em] sm:px-[1.1em] my-2 ${goBackTo ? "w-full" : ""}
+                absolute right-0 flex justify-between items-center px-[0.7em] sm:px-[1.1em] my-2 xs:my-3 ${goBackTo ? "w-full" : ""}
             `}
         >
             <div

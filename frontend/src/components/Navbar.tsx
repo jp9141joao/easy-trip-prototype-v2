@@ -2,10 +2,12 @@ import { useState } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Button } from "./ui/button";
 import { Sidebar } from "./Sidebar";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
 
     const [ changeTheme, setChangeTheme ] = useState<string>("light");
+    const navigate = useNavigate();
     const navItems = [
         {
             name: 'Discover',
@@ -53,8 +55,9 @@ export const Navbar = () => {
                         }        
                         <div>
                             <Button
-                                className="font-semibold sm:text-sm md:text-base lg:text-base hover:scale-105"
                                 size={"lg"}
+                                onClick={(() => navigate("/signIn"))}
+                                className="font-semibold sm:text-sm md:text-base lg:text-base hover:scale-105"
                             >
                                 Sign In
                             </Button>

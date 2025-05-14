@@ -6,7 +6,6 @@ import BrandSection from "../components/LoginPage/SignUpPage/BrandSection";
 import SignUpFormSection from "../components/LoginPage/SignUpPage/SignUpFormSection";
 import { SignUpUser } from "../service/api";
 import { Utils } from "../utils/Utils";
-import { isAxiosError } from "axios";
 
 export default function SignIn() {
 
