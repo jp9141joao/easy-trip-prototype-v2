@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import { PrismaClient } from "@prisma/client";
 import { v4 as uuidv4 } from "uuid";
+import { PrismaClient } from "../../generated/prisma";
 
 dotenv.config();
 const SECRET_KEY = process.env.SECRET_KEY;

@@ -64,15 +64,15 @@ export default function SignIn() {
 
                 const message = error.message;
                 
-                if (message.includes("E-mail") && message.includes("Password")) {
+                if (message.toUpperCase().includes("E-MAIL") && message.toUpperCase().includes("PASSWORD")) {
                     
                     setErrorOrigin("E-mail and Password");
 
-                } else if (message.includes("E-mail")) {
+                } else if (message.toUpperCase().includes("E-MAIL")) {
 
                     setErrorOrigin("E-mail");
 
-                } else if (message.includes("Password")) {
+                } else if (message.toUpperCase().includes("PASSWORD")) {
 
                     setErrorOrigin("Password");
 

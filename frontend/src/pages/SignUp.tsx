@@ -17,7 +17,7 @@ export default function SignIn() {
     const [ errorMessage, setErrorMessage ] = useState<string>("");
     const [ errorOrigin, setErrorOrigin ] = useState<string>("");
 
-    const handleSignUp = async () => {
+    const handleSignUp = async () => { 
         setLoading(true);
         setErrorMessage("");
         setErrorOrigin("");
@@ -27,22 +27,23 @@ export default function SignIn() {
             setErrorOrigin("Full Name");
             setLoading(false);
             return;
-        
-        } else if (Utils.isFullNameValid(fullName)) {
-            setErrorMessage("Full name must contain at least 3 characters");
+
+        } else if (!Utils.isFullNameValid(fullName)) {
+            setErrorMessage("Full name is invalid");
             setErrorOrigin("Full Name");
             setLoading(false);
             return;
+            
         } 
 
         if (!email) {
-            setErrorMessage("Email is required");
+            setErrorMessage("E-mail is required");
             setErrorOrigin("E-mail");
             setLoading(false);
             return;
 
         } else if (!Utils.isValidEmail(email)) {
-            setErrorMessage("Invalid email format");
+            setErrorMessage("Invalid e-mail format");
             setErrorOrigin("E-mail");
             setLoading(false);
             return;
@@ -56,7 +57,7 @@ export default function SignIn() {
             return;
 
         } else if (!Utils.isValidPassword(password)) {
-            setErrorMessage("Password must contain at least 8 characters, including uppercase letters, numbers, and special characters");
+            setErrorMessage("Password is too weak");
             setErrorOrigin("Password");
             setLoading(false);
             return;
@@ -70,28 +71,24 @@ export default function SignIn() {
             localStorage.setItem("authToken", token);
             window.location.reload();
 
-        } catch (error) {
-            
-            if (isAxiosError(error)) {
+        } catch (error: any) {
 
-                const message = error.message;
-                
-                if (message.includes("E-mail")) {
+            const message: string = error.toString();
 
-                    setErrorOrigin("E-mail");
+            if (message.toUpperCase().includes("FULL NAME")) {
 
-                } else if (message.includes("Password")) {
+                setErrorOrigin("Full Name");
 
-                    setErrorOrigin("Password");
-                }
+            } else if (message.toUpperCase().includes("E-MAIL")) {
 
-                setErrorMessage(message);
+                setErrorOrigin("E-mail");
 
-            } else {
+            } else if (message.toUpperCase().includes("PASSWORD")) {
 
-                setErrorMessage("An error occurred while signing up");
-
+                setErrorOrigin("Password");
             }
+
+            setErrorMessage(message);
             
         } finally {
             setLoading(false);

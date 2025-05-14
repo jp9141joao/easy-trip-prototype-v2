@@ -7,11 +7,11 @@ export default function LoginGoogle({ type }: { type: 'Login' | 'Register' }) {
     return (
         <div className="grid place-items-center items-center gap-4 mt-4">
             <div className="flex justify-center items-center gap-2">
-                <Separator className=" bg-black" />
-                <span className="text-sm text-black">
+                <Separator className="bg-black dark:bg-white" />
+                <span className="text-sm text-black dark:text-white">
                     OR
                 </span>
-                <Separator className=" bg-black" />
+                <Separator className=" bg-black dark:bg-white" />
             </div>
             <div className="w-full">
                 <Button

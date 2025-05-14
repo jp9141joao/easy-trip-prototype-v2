@@ -3,11 +3,11 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { Request, Response } from 'express';
 import { Utils } from '../utils/utils';
-import { PrismaClient } from '@prisma/client';
 import { HttpResult } from '../models/httpResult';
 import { v4 as uuidv4 } from 'uuid';
 import { TokenService } from '../services/tokenService';
 import { UserInfo, UserLogin } from '../types/types';
+import { PrismaClient } from '../../generated/prisma';
 
 dotev.config();
 const SECRET_KEY = process.env.SECRET_KEY;

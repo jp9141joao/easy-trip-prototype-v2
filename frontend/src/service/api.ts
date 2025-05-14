@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const SignInUser = async (email: string, password: string) => {
@@ -46,12 +47,13 @@ export const SignUpUser = async (fullName: string, email: string, password: stri
 
     } catch (error: any) {
 
+
         if (axios.isAxiosError(error)) {
             const { response } = error;
 
             if (response) {
                 const { data } = response;
-                throw new Error(data.message);
+                throw new Error(data.error);
             }
         }
         
