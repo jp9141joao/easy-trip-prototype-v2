@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { 
     Accordion,
     AccordionContent, 
@@ -43,33 +44,33 @@ export const Footer = () => {
                         </strong>
                     </h1>
                 </div>
-                <div>
-                    <Accordion 
-                        type="single" 
-                        className="w-full grid gap-3 sm:gap-6"
-                        collapsible
-                    >
-                        {
-                            questions.map((item: any, index: number) => (
-                                <AccordionItem
-                                    key={index}
-                                    value={`item-${index + 1}`}
-                                >
-                                    <AccordionTrigger className="text-lg sm:text-2xl">
-                                        { item.question }
-                                    </AccordionTrigger>
-                                    <AccordionContent className="sm:text-xl">
-                                        { item.answer }
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))
-                        }
-                    </Accordion>
+                <div className="w-full grid gap-10 mt-3 ">
+                    {
+                        questions.map((item: any, index: number) => (
+                            <div
+                                key={index}
+                                className=""
+                            >
+                                <h3 className="text-lg sm:text-2xl font-semibold">
+                                    { item.question }
+                                </h3>
+                                <p className="sm:text-xl">
+                                    { item.answer }
+                                </p>
+                            </div>
+                        ))
+                    }
                 </div>
-                <div className="w-full mt-2">
+                <div className="w-full flex justify-center gap-2 text-center my-3">
                     <p className="text-lg sm:text-2xl text-center">
-                        © Created by Joao Pedro de Paula.
+                        © Created by 
                     </p>
+                    <a 
+                        href="https://www.linkedin.com/in/joaopedrorosadepaula/"
+                        className="text-lg sm:text-2xl text-center underline"
+                    >
+                        João Pedro Rosa de Paula
+                    </a>
                 </div>
             </div>
         </div>

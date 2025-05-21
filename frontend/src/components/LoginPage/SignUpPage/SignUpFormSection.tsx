@@ -83,7 +83,7 @@ export default function SignUpFormSection
                 <Button
                     size={"xl"}
                     onClick={handleSignUp}
-                    className="w-full text-base sm:text-xl font-semibold"
+                    className="w-full text-base sm:text-xl lg:text-base font-semibold"
                 >
                     {
                         loading ? 

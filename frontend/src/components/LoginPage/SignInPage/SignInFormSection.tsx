@@ -66,7 +66,7 @@ export default function SignInFormSection
                 <Button
                     size={"xl"}
                     onClick={handleSignIn}
-                    className="w-full text-base sm:text-xl font-semibold"
+                    className="w-full text-base sm:text-xl lg:text-base font-semibold"
                 >
                     {
                         loading ? 
