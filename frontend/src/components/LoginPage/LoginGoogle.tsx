@@ -5,10 +5,10 @@ import IconGoogle from "../../assets/login/icon-google.png"
 export default function LoginGoogle({ type }: { type: 'Login' | 'Register' }) {
 
     return (
-        <div className="grid place-items-center items-center gap-4 mt-4">
+        <div className="grid place-items-center items-center gap-4 mt-4 text-base lg:text-sm 2xl:text-base">
             <div className="flex justify-center items-center gap-2">
                 <Separator className="bg-black dark:bg-white" />
-                <span className="text-sm text-black dark:text-white">
+                <span className=" text-black dark:text-white">
                     OR
                 </span>
                 <Separator className=" bg-black dark:bg-white" />
@@ -23,7 +23,7 @@ export default function LoginGoogle({ type }: { type: 'Login' | 'Register' }) {
                         alt="icon-google"
                         className="w-6 h-6 rounded-4xl"
                     />
-                    <p className="text-base">
+                    <p>
                         { type } with Google
                     </p>
                 </Button>     

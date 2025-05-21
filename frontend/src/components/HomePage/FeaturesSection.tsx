@@ -74,7 +74,7 @@ export const FeaturesSection = () => {
                                         src={ item.url }
                                         alt={ item.title }
                                         loading='eager'
-                                        className='rounded-2xl'                                
+                                        className='rounded-2xl xs:h-[40vh] lg:h-[44vh]'                                
                                     />
                                 </div>
                                 <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50'>
@@ -109,7 +109,7 @@ export const FeaturesSection = () => {
                                         src={ item.url }
                                         alt={ item.title }
                                         loading='eager'
-                                        className='rounded-2xl'                                
+                                        className='rounded-2xl xs:h-[40vh] lg:h-[44vh]'                                
                                     />
                                 </div>
                                 <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50'>
