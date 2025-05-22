@@ -5,7 +5,7 @@ import Image from '../../assets/home/hero.avif'
 import { useEffect } from "react";
 import { preload } from "react-dom";
 
-export const HeroSection = () => {
+export const HeroSection = ({ targetRef }: { targetRef: React.RefObject<HTMLDivElement | null> }) => {
 
     useEffect(() => {
         preload(Image, { as: 'image' });
@@ -38,10 +38,11 @@ export const HeroSection = () => {
                             size={"xl"}
                             className="text-base sm:text-xl font-semibold"
                             onClick={() => {
-                                window.scrollTo({
-                                    top: document.documentElement.scrollHeight,
-                                    behavior: 'smooth'
-                                });
+                                
+                                if (targetRef.current) {
+                                    targetRef.current.scrollIntoView({ behavior: "smooth" });
+                                }
+
                             }}
                         >
                             Learn more

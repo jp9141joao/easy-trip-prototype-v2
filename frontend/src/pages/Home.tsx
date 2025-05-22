@@ -1,3 +1,4 @@
+import React from "react";
 import { Footer } from "../components/Footer";
 import { FeaturesSection } from "../components/HomePage/FeaturesSection";
 import { HeroSection } from "../components/HomePage/HeroSection";
@@ -7,13 +8,15 @@ import LayoutPage from "../components/ui/LayoutPage";
 
 export function Home() {
 
+    const targetRef = React.useRef<HTMLDivElement>(null);
+
     return (
         <LayoutPage>
             <Navbar />
-            <HeroSection />
+            <HeroSection targetRef={ targetRef } />
             <FeaturesSection />
             <PopularPlaces />
-            <Footer />
+            <Footer targetRef={ targetRef } />
         </LayoutPage>
     )
 }

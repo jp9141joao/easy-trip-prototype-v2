@@ -4,7 +4,7 @@ export default function LayoutPage({ children }: { children: React.ReactNode }){
 
     return (
         <div className=''>
-            <div className='max-w-[100rem]'>
+            <div className='min-w-[270px] max-w-[100rem]'>
                 { children }
             </div>
         </div>

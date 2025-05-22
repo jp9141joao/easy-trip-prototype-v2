@@ -187,7 +187,7 @@ export const PopularPlaces = () => {
                                 <CarouselItem 
                                     key={index}
                                     className={`
-                                        basis-[68vw] xs:basis-[48.5vw] sm:basis-[48.5vw] lg:basis-[26vw] 
+                                        basis-46 2xs:basis-[68vw] xs:basis-[48.5vw] sm:basis-[48.5vw] lg:basis-[26vw] 
                                     `}
                                     onClick={() => {
                                         setSelectedPlace(index);
@@ -199,10 +199,10 @@ export const PopularPlaces = () => {
                                             src={ item.cardImage }
                                             alt={ item.city }
                                             loading='eager'
-                                            className='w-[64vw] xs:w-[45vw] sm:w-[45vw] lg:w-[24vw] h-[122vw] xs:h-[90vw] lg:h-[44vw] rounded-3xl z-0'
+                                            className='w-[180px] 2xs:w-[64vw] xs:w-[45vw] sm:w-[45vw] lg:w-[24vw] h-[340px] 2xs:h-[122vw] xs:h-[90vw] lg:h-[44vw] rounded-3xl z-0'
                                         />
                                     </div>
-                                    <div className='absolute top-0 pl-[51vw] xs:pl-[43.5vw] sm:pl-[36.2vw] lg:pl-[19.3vw] py-5 z-10'>
+                                    <div className='absolute top-0 pl-[130px] 2xs:pl-[51vw] xs:pl-[43.5vw] sm:pl-[36.2vw] lg:pl-[19.3vw] py-5 z-10'>
                                         <TbHandClick className='icon-responsive text-white'/>
                                     </div>
                                     <div className='absolute bottom-0 z-50 p-4'>
@@ -224,26 +224,26 @@ export const PopularPlaces = () => {
                             setShowSheet(false);
                         }
                     }}
-                    
                 >
                     <SheetContent 
                         side='bottom' 
                         className='
                             xs:rounded-t-2xl max-h-[90vh] xs:min-w-[70vw] lg:min-w-auto lg:max-w-[36vw]
                             xs:inset-auto xs:bottom-0 xs:left-1/2 xs:transform xs:-translate-x-1/2  overflow-hidden
+                            dark:border-1 dark:border-gray-200
                         '
                     >
                         <div className='grid place-items-start gap-1 px-7 pt-7'>
-                                <div>
-                                    <h1 className='text-xl sm:text-3xl lg:text-xl font-semibold'>
-                                        { places[selectedPlace].city }
-                                    </h1>
-                                </div>
-                                <div>
-                                    <p className='text-sm sm:text-lg lg:text-sm'>
-                                        { renderParagraphs(places[selectedPlace].about) }
-                                    </p>
-                                </div>
+                            <div>
+                                <h1 className='text-xl sm:text-3xl lg:text-xl font-semibold'>
+                                    { places[selectedPlace].city }
+                                </h1>
+                            </div>
+                            <div>
+                                <p className='text-sm sm:text-lg lg:text-sm'>
+                                    { renderParagraphs(places[selectedPlace].about) }
+                                </p>
+                            </div>
                         </div>
                         <div className='w-full px-6 pb-1'>
                             <Button

@@ -77,9 +77,9 @@ export const FeaturesSection = () => {
                                         className='rounded-2xl xs:h-[40vh] lg:h-[44vh]'                                
                                     />
                                 </div>
-                                <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50'>
+                                <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50 '>
                                     <div className='flex gap-2'>
-                                        <h1 className="text-xl sm:text-3xl font-semibold">
+                                        <h1 className="text-lg sm:text-2xl font-semibold">
                                             { item.title}
                                         </h1>
                                         <span>
@@ -114,7 +114,7 @@ export const FeaturesSection = () => {
                                 </div>
                                 <div className='bg-gray-200 dark:bg-gray-900 rounded-2xl shadow-md -mt-14 mb-10 lg:mb-14 ml-8 sm:ml-20 lg:ml-8 p-3 z-50'>
                                     <div className='flex gap-2'>
-                                        <h1 className="text-xl sm:text-3xl font-semibold">
+                                        <h1 className="text-lg sm:text-2xl font-semibold">
                                             { item.title}
                                         </h1>
                                         <span>

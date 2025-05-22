@@ -1,12 +1,4 @@
-import { Link } from "react-router-dom";
-import { 
-    Accordion,
-    AccordionContent, 
-    AccordionItem, 
-    AccordionTrigger 
-} from "./ui/accordion";
-
-export const Footer = () => {
+export const Footer = ({ targetRef }: { targetRef: React.RefObject<HTMLDivElement | null> }) => {
 
     const questions = [
         {
@@ -32,7 +24,7 @@ export const Footer = () => {
     ];
     
     return (
-        <div className="rounded-t-3xl bg-gray-100 dark:bg-gray-900">
+        <div ref={ targetRef } className="rounded-t-3xl bg-gray-100 dark:bg-gray-800">
             <div className="grid place-items-start gap-5 margin-x-page pt-8 sm:pt-18">
                 <div className="lg:flex lg:gap-4">
                     <h1 className="text-3xl sm:text-5xl text-start font-extrabold  break-words">
@@ -40,7 +32,7 @@ export const Footer = () => {
                     </h1>
                     <h1 className="text-3xl sm:text-5xl text-start text-green-theme  font-semibold break-words">
                         <strong>
-                            FAQ !
+                            FAQ!
                         </strong>
                     </h1>
                 </div>
@@ -49,7 +41,7 @@ export const Footer = () => {
                         questions.map((item: any, index: number) => (
                             <div
                                 key={index}
-                                className=""
+                                className="dark:text-gray-200"
                             >
                                 <h3 className="text-lg sm:text-2xl font-semibold">
                                     { item.question }
@@ -61,8 +53,9 @@ export const Footer = () => {
                         ))
                     }
                 </div>
-                <div className="w-full flex justify-center gap-2 text-center my-3">
-                    <p className="text-lg sm:text-2xl text-center">
+                <div className="w-full flex justify-center gap-2 text-center mt-6 mb-4 break-all">
+                    <div>
+                        <p className="text-lg sm:text-2xl text-center">
                         © Created by 
                     </p>
                     <a 
@@ -71,6 +64,7 @@ export const Footer = () => {
                     >
                         João Pedro Rosa de Paula
                     </a>
+                    </div>
                 </div>
             </div>
         </div>

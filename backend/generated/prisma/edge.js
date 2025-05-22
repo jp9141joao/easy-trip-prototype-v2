@@ -132,7 +132,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\jp914\\Projects\\easy-trip-prototype-v2\\backend\\generated\\prisma",
+      "value": "/workspaces/easy-trip-prototype-v2/backend/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -141,17 +141,16 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-1.1.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\jp914\\Projects\\easy-trip-prototype-v2\\backend\\prisma\\schema.prisma",
+    "sourceFilePath": "/workspaces/easy-trip-prototype-v2/backend/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "6.7.0",
@@ -160,7 +159,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {

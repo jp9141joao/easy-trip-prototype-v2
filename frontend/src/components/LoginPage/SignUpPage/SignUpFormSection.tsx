@@ -20,7 +20,7 @@ export default function SignUpFormSection
 {
 
     return (
-        <div className="grid gap-4 mt-4">
+        <div className="grid gap-4 mt-4 px-6 2xs:px-0">
             <div className="grid gap-2">
                 <Label htmlFor="fullName">
                     Full Name
